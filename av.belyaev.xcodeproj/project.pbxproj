@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2185A0CFBD52CF35D02F8C31 /* Pods_av_belyaevTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86C1B3185A10CC0162A5EEDB /* Pods_av_belyaevTests.framework */; };
+		6E106B18174EC561D1487FC5 /* Pods_av_belyaevUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 273649218A489231243F2C8E /* Pods_av_belyaevUITests.framework */; };
+		9AF21B82D5474463E3A1484F /* Pods_av_belyaev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5194E9C1AB5A7E08E28D1BD8 /* Pods_av_belyaev.framework */; };
+		AE214AD820F24EFE003F960D /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE214AD720F24EFE003F960D /* AbstractErrorParser.swift */; };
+		AE214ADA20F24FB3003F960D /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE214AD920F24FB3003F960D /* ErrorParser.swift */; };
 		AE41F99D20EB779F002D96E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41F99C20EB779F002D96E6 /* AppDelegate.swift */; };
 		AE41F9A420EB779F002D96E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE41F9A320EB779F002D96E6 /* Assets.xcassets */; };
 		AE41F9A720EB779F002D96E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE41F9A520EB779F002D96E6 /* LaunchScreen.storyboard */; };
@@ -32,6 +37,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18961FED03253CEF6D3D31FC /* Pods-av.belyaevUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-av.belyaevUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-av.belyaevUITests/Pods-av.belyaevUITests.release.xcconfig"; sourceTree = "<group>"; };
+		273649218A489231243F2C8E /* Pods_av_belyaevUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_av_belyaevUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9994B3A23D734A0C11BD17 /* Pods-av.belyaevUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-av.belyaevUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-av.belyaevUITests/Pods-av.belyaevUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		48C01E5B66EBCCB82FED80A7 /* Pods-av.belyaev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-av.belyaev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-av.belyaev/Pods-av.belyaev.debug.xcconfig"; sourceTree = "<group>"; };
+		5194E9C1AB5A7E08E28D1BD8 /* Pods_av_belyaev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_av_belyaev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86C1B3185A10CC0162A5EEDB /* Pods_av_belyaevTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_av_belyaevTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DBB73AC05789BCB3FC954A4 /* Pods-av.belyaev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-av.belyaev.release.xcconfig"; path = "Pods/Target Support Files/Pods-av.belyaev/Pods-av.belyaev.release.xcconfig"; sourceTree = "<group>"; };
+		AE214AD720F24EFE003F960D /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
+		AE214AD920F24FB3003F960D /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		AE41F99920EB779F002D96E6 /* av.belyaev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = av.belyaev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE41F99C20EB779F002D96E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE41F9A320EB779F002D96E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +57,8 @@
 		AE41F9B820EB779F002D96E6 /* av.belyaevUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = av.belyaevUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE41F9BC20EB779F002D96E6 /* av_belyaevUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = av_belyaevUITests.swift; sourceTree = "<group>"; };
 		AE41F9BE20EB779F002D96E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD5CC5E9BEE7BBC44351770F /* Pods-av.belyaevTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-av.belyaevTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-av.belyaevTests/Pods-av.belyaevTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E8358817210F57FA0E73DBA0 /* Pods-av.belyaevTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-av.belyaevTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-av.belyaevTests/Pods-av.belyaevTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AF21B82D5474463E3A1484F /* Pods_av_belyaev.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2185A0CFBD52CF35D02F8C31 /* Pods_av_belyaevTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,12 +82,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E106B18174EC561D1487FC5 /* Pods_av_belyaevUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		67F58C7E235628C49D198444 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48C01E5B66EBCCB82FED80A7 /* Pods-av.belyaev.debug.xcconfig */,
+				9DBB73AC05789BCB3FC954A4 /* Pods-av.belyaev.release.xcconfig */,
+				CD5CC5E9BEE7BBC44351770F /* Pods-av.belyaevTests.debug.xcconfig */,
+				E8358817210F57FA0E73DBA0 /* Pods-av.belyaevTests.release.xcconfig */,
+				3A9994B3A23D734A0C11BD17 /* Pods-av.belyaevUITests.debug.xcconfig */,
+				18961FED03253CEF6D3D31FC /* Pods-av.belyaevUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AE214AD620F24EBA003F960D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AE214AD720F24EFE003F960D /* AbstractErrorParser.swift */,
+				AE214AD920F24FB3003F960D /* ErrorParser.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		AE41F99020EB779F002D96E6 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +118,8 @@
 				AE41F9B020EB779F002D96E6 /* av.belyaevTests */,
 				AE41F9BB20EB779F002D96E6 /* av.belyaevUITests */,
 				AE41F99A20EB779F002D96E6 /* Products */,
+				67F58C7E235628C49D198444 /* Pods */,
+				B39C4F2208C926AA56908A85 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +182,7 @@
 		AE41F9CC20EB941B002D96E6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				AE214AD620F24EBA003F960D /* Network */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -167,6 +211,16 @@
 			path = Flows;
 			sourceTree = "<group>";
 		};
+		B39C4F2208C926AA56908A85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5194E9C1AB5A7E08E28D1BD8 /* Pods_av_belyaev.framework */,
+				86C1B3185A10CC0162A5EEDB /* Pods_av_belyaevTests.framework */,
+				273649218A489231243F2C8E /* Pods_av_belyaevUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,9 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE41F9C120EB779F002D96E6 /* Build configuration list for PBXNativeTarget "av.belyaev" */;
 			buildPhases = (
+				354D3E18420A950316C0D2E3 /* [CP] Check Pods Manifest.lock */,
 				AE41F99520EB779F002D96E6 /* Sources */,
 				AE41F99620EB779F002D96E6 /* Frameworks */,
 				AE41F99720EB779F002D96E6 /* Resources */,
+				93398E9422FAE813D3281220 /* [CP] Embed Pods Frameworks */,
+				25EB033BC7DA197C518540CA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,9 +248,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE41F9C420EB779F002D96E6 /* Build configuration list for PBXNativeTarget "av.belyaevTests" */;
 			buildPhases = (
+				1F12854458021827BEF0D495 /* [CP] Check Pods Manifest.lock */,
 				AE41F9A920EB779F002D96E6 /* Sources */,
 				AE41F9AA20EB779F002D96E6 /* Frameworks */,
 				AE41F9AB20EB779F002D96E6 /* Resources */,
+				17D6DC43013086DED8FC4062 /* [CP] Embed Pods Frameworks */,
+				398BD329C18DD1E6EDB5D188 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,9 +269,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE41F9C720EB779F002D96E6 /* Build configuration list for PBXNativeTarget "av.belyaevUITests" */;
 			buildPhases = (
+				3CBBF2B9B73A06B0324C9A04 /* [CP] Check Pods Manifest.lock */,
 				AE41F9B420EB779F002D96E6 /* Sources */,
 				AE41F9B520EB779F002D96E6 /* Frameworks */,
 				AE41F9B620EB779F002D96E6 /* Resources */,
+				C588A6F6264C2E829F4624C6 /* [CP] Embed Pods Frameworks */,
+				77A352A465D460106427671C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,12 +358,164 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		17D6DC43013086DED8FC4062 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-av.belyaevTests/Pods-av.belyaevTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1F12854458021827BEF0D495 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-av.belyaevTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25EB033BC7DA197C518540CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-av.belyaev/Pods-av.belyaev-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		354D3E18420A950316C0D2E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-av.belyaev-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		398BD329C18DD1E6EDB5D188 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-av.belyaevTests/Pods-av.belyaevTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CBBF2B9B73A06B0324C9A04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-av.belyaevUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77A352A465D460106427671C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-av.belyaevUITests/Pods-av.belyaevUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93398E9422FAE813D3281220 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-av.belyaev/Pods-av.belyaev-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-av.belyaev/Pods-av.belyaev-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C588A6F6264C2E829F4624C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-av.belyaevUITests/Pods-av.belyaevUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AE41F99520EB779F002D96E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AE41F99D20EB779F002D96E6 /* AppDelegate.swift in Sources */,
+				AE214ADA20F24FB3003F960D /* ErrorParser.swift in Sources */,
+				AE214AD820F24EFE003F960D /* AbstractErrorParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,11 +671,12 @@
 		};
 		AE41F9C220EB779F002D96E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48C01E5B66EBCCB82FED80A7 /* Pods-av.belyaev.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DY58N6J6Q3;
-				INFOPLIST_FILE = av.belyaev/Info.plist;
+				INFOPLIST_FILE = av.belyaev/Environments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ZC.av-belyaev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -471,11 +687,12 @@
 		};
 		AE41F9C320EB779F002D96E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DBB73AC05789BCB3FC954A4 /* Pods-av.belyaev.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DY58N6J6Q3;
-				INFOPLIST_FILE = av.belyaev/Info.plist;
+				INFOPLIST_FILE = av.belyaev/Environments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ZC.av-belyaev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -486,6 +703,7 @@
 		};
 		AE41F9C520EB779F002D96E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD5CC5E9BEE7BBC44351770F /* Pods-av.belyaevTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -503,6 +721,7 @@
 		};
 		AE41F9C620EB779F002D96E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8358817210F57FA0E73DBA0 /* Pods-av.belyaevTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -520,6 +739,7 @@
 		};
 		AE41F9C820EB779F002D96E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A9994B3A23D734A0C11BD17 /* Pods-av.belyaevUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -536,6 +756,7 @@
 		};
 		AE41F9C920EB779F002D96E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18961FED03253CEF6D3D31FC /* Pods-av.belyaevUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
