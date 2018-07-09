@@ -12,10 +12,68 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let requestFactory = RequestFactory()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let auth = requestFactory.makeAuthRequestFactory()
+        auth.login(
+        userName: "Somebody",
+        password: "mypassword"){ response in
+            switch response.result{
+            case .success(let login):
+                print(login)
+            case .failure(let error):
+                print(error.localizedDescription)
+                
+            }
+        }
+        
+        let registration = requestFactory.makeRegistrationRequestFactory()
+        registration.registration(
+        userName: "bob",
+        password: "322",
+        email: "bob@ya.ru",
+        gender: "f",
+        creditCard: "4276_8000_7589_4877",
+        bio: "Like a boss"){ response in
+            switch response.result {
+            case .success(let checkIn):
+                print(checkIn)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let modification = requestFactory.makeModificationRequestFactory()
+        modification.editUserData(
+        id: 322,
+        userName: "bob",
+        password: "4355",
+        email: "bob2@ya.ru",
+        gender: "f",
+        creditCard: "4276_8001_7589_4877",
+        bio: "Like a boss Smoke weed everyday"){ response in
+            switch response.result {
+            case .success(let modify):
+                print(modify)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let logout = requestFactory.makeLogoutRequestFactory()
+        logout.logout(userID: 322) { response in
+            switch response.result{
+            case .success(let logout):
+                print(logout)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        
         return true
     }
 

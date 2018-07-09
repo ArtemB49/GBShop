@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ErrorParser: AbsrtacrErrorParser {
+class ErrorParser: AbsrtactErrorParser {   
     
     func parse(_ result: Error) -> Error {
         return result
