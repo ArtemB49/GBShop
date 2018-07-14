@@ -15,4 +15,12 @@ protocol AuthRequestFactory {
         userName: String,
         password: String,
         completionHandler: @escaping (DataResponse<LoginResult>) -> Void)
+    
+    func logout(
+        userID: Int,
+        completionHandler: @escaping (DataResponse<LogoutResult>) -> Void)
+    
+    func registration(
+        userInfo: UserInfo,
+        completionHandler: @escaping (DataResponse<RegistrationResult>) -> Void )
 }

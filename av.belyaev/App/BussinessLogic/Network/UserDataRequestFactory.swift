@@ -1,5 +1,5 @@
 //
-//  ModificationRequestFactory.swift
+//  UserDataRequestFactory.swift
 //  av.belyaev
 //
 //  Created by Артем Б on 09.07.2018.
@@ -9,14 +9,8 @@
 import Foundation
 import Alamofire
 
-protocol ModificationRequestFactory {
+protocol UserDataRequestFactory {
     func editUserData(
-        id: Int,
-        userName: String,
-        password: String,
-        email: String,
-        gender: String,
-        creditCard: String,
-        bio: String,
+        userInfo: UserInfo,
         completionHandler: @escaping (DataResponse<ModificationResult>) -> Void )
 }

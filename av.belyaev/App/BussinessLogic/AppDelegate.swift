@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let auth = requestFactory.makeAuthRequestFactory()
+        let auth: AuthRequestFactory = requestFactory.makeAuthRequestFactory()
         auth.login(
         userName: "Somebody",
         password: "mypassword"){ response in
@@ -30,41 +30,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
-        let registration = requestFactory.makeRegistrationRequestFactory()
-        registration.registration(
-        userName: "bob",
-        password: "322",
-        email: "bob@ya.ru",
-        gender: "f",
-        creditCard: "4276_8000_7589_4877",
-        bio: "Like a boss"){ response in
-            switch response.result {
-            case .success(let checkIn):
-                print(checkIn)
-            case .failure(let error):
-                print(error.localizedDescription)
+        auth.registration(
+            userInfo: UserInfo(
+                id: 322,
+                userName: "bob",
+                password: "boec",
+                email: "bob@ex.ru",
+                gender: "m",
+                creditCard: "4925_2555_7845_2500",
+                bio: "I am hungry"
+                )
+            ){ response in
+                switch response.result {
+                case .success(let checkIn):
+                    print(checkIn)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
             }
-        }
         
-        let modification = requestFactory.makeModificationRequestFactory()
-        modification.editUserData(
-        id: 322,
-        userName: "bob",
-        password: "4355",
-        email: "bob2@ya.ru",
-        gender: "f",
-        creditCard: "4276_8001_7589_4877",
-        bio: "Like a boss Smoke weed everyday"){ response in
-            switch response.result {
-            case .success(let modify):
-                print(modify)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-        
-        let logout = requestFactory.makeLogoutRequestFactory()
-        logout.logout(userID: 322) { response in
+        auth.logout(userID: 322) { response in
             switch response.result{
             case .success(let logout):
                 print(logout)
@@ -73,6 +58,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        let modification: UserDataRequestFactory = requestFactory.makeModificationRequestFactory()
+        modification.editUserData(
+            userInfo: UserInfo(
+                id: 322,
+                userName: "bob",
+                password: "4355",
+                email: "bob2@ya.ru",
+                gender: "f",
+                creditCard: "4276_8001_7589_4877",
+                bio: "Like a boss Smoke weed everyday"
+                )
+            ){ response in
+                switch response.result {
+                case .success(let modify):
+                    print(modify)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }       
         
         return true
     }
