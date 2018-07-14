@@ -6,7 +6,7 @@ target 'av.belyaev' do
   use_frameworks!
 
   pod 'Alamofire', '~> 4.7'
-
+  pod 'OHHTTPStubs/Swift'
   # Pods for av.belyaev
 
   target 'av.belyaevTests' do

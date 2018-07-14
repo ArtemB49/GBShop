@@ -8,18 +8,20 @@
 
 import Foundation
 import Alamofire
+import OHHTTPStubs
+@testable import av_belyaev
 
-class RequestFactory {
+class RequestFactoryMock {
     
     func makeErrorParser() -> AbsrtactErrorParser {
-        return ErrorParser()
+        return ErrorParserStubs()
     }
     
     lazy var commonSessionManager: SessionManager = {
-        let configuration = URLSessionConfiguration.default
-        configuration.httpShouldSetCookies = false
-        configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
+        let configuration = URLSessionConfiguration.ephemeral
+        OHHTTPStubs.isEnabled(for: configuration)
         let manager = SessionManager(configuration: configuration)
+        
         return manager
     }()
     

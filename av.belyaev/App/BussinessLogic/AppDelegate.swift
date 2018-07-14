@@ -76,7 +76,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 case .failure(let error):
                     print(error.localizedDescription)
                 }
-            }       
+            }
+        
+        let catalog: CatalogRequestFactory = requestFactory.makeCatalogRequestFactory()
+        
+        catalog.getCatalog(
+            pageNumber: 1,
+            categoryID: 1
+        ){ response in
+            switch response.result {
+            case .success(let catalogResult):
+                print(catalogResult)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        catalog.getProduct(id: 1){ response in
+            switch response.result {
+            case .success(let product):
+                print(product)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
         
         return true
     }
