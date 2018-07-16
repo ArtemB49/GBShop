@@ -15,21 +15,18 @@ protocol AbstractRequestFactory {
     var queue: DispatchQueue? { get }
     
     @discardableResult
-    
     func request<T: Decodable>(
         request: URLRequestConvertible,
         completionHandler: @escaping (DataResponse<T>) -> Void)
         -> DataRequest
-    
 }
 
-extension AbstractRequestFactory {
-    
+extension AbstractRequestFactory {    
     @discardableResult
     public func request<T: Decodable>(
         request: URLRequestConvertible,
         completionHandler: @escaping (DataResponse<T>) -> Void)
-        -> DataRequest{
+        -> DataRequest {
             return sessionManager
             .request(request)
                 .respondeCodable(errorParser: errorParser, queue: queue, completionHandler: completionHandler)

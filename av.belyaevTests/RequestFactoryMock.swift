@@ -27,7 +27,7 @@ class RequestFactoryMock {
     
     let sessionQueue = DispatchQueue.global(qos: .utility)
     
-    func makeAuthRequestFactory<T>() -> T!{
+    func makeAuthRequestFactory<T>() -> T! {
         let errorParser = makeErrorParser()
         return Auth(
             errorParser: errorParser,
@@ -36,9 +36,9 @@ class RequestFactoryMock {
     }
     
     
-    func makeModificationRequestFactory<T>() -> T! {
+    func makeChangeUserDataRequestFactory<T>() -> T! {
         let errorParser = makeErrorParser()
-        return UserData(
+        return UserProfile(
             errorParser: errorParser,
             sessionManager: commonSessionManager,
             queue: sessionQueue) as? T
@@ -52,5 +52,12 @@ class RequestFactoryMock {
             queue: sessionQueue) as? T
     }
     
+    func makeReviewsRequestFactory<T>() -> T! {
+        let errorParser = makeErrorParser()
+        return Reviews(
+            errorParser: errorParser,
+            sessionManager: commonSessionManager,
+            queue: sessionQueue) as? T
+    }
 
 }

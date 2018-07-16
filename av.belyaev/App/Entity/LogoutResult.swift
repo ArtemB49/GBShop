@@ -1,5 +1,5 @@
 //
-//  LogoutMessage.swift
+//  LogoutResult.swift
 //  av.belyaev
 //
 //  Created by Артем Б on 09.07.2018.

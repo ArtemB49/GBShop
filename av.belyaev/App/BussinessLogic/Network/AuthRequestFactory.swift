@@ -14,13 +14,16 @@ protocol AuthRequestFactory {
     func login(
         userName: String,
         password: String,
-        completionHandler: @escaping (DataResponse<LoginResult>) -> Void)
+        completionHandler: @escaping (DataResponse<LoginResult>) -> Void
+        )
     
     func logout(
         userID: Int,
-        completionHandler: @escaping (DataResponse<LogoutResult>) -> Void)
+        completionHandler: @escaping (DataResponse<LogoutResult>) -> Void
+        )
     
     func registration(
-        userInfo: UserInfo,
-        completionHandler: @escaping (DataResponse<RegistrationResult>) -> Void )
+        userData: UserData,
+        completionHandler: @escaping (DataResponse<RegistrationResult>) -> Void
+        )
 }

@@ -16,17 +16,16 @@ class Auth: BaseRequestFactory, AuthRequestFactory {
     }
     
     func logout(userID: Int, completionHandler: @escaping (DataResponse<LogoutResult>) -> Void) {
-        let requestModel = SingOut(baseUrl: baseUrl, id: userID)
+        let requestModel = Logout(baseUrl: baseUrl, userID: userID)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
-    func registration(userInfo: UserInfo, completionHandler: @escaping (DataResponse<RegistrationResult>) -> Void) {
-        let requestModel = ChechIn(baseUrl: baseUrl, userInfo: userInfo)
+    func registration(userData: UserData, completionHandler: @escaping (DataResponse<RegistrationResult>) -> Void) {
+        let requestModel = SingIn(baseUrl: baseUrl, userData: userData)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 
 }
-
 
 extension Auth {
     struct Login: RequestRouter {
@@ -35,7 +34,6 @@ extension Auth {
         let path: String = "login.json"
         let login: String
         let password: String
-        
         var parameters: Parameters? {
             return [
                 "username": login,
@@ -46,37 +44,34 @@ extension Auth {
 }
 
 extension Auth {
-    struct SingOut: RequestRouter {
+    struct Logout: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
         let path: String = "logout.json"
-        let id: Int
-        
+        let userID: Int
         var parameters: Parameters? {
             return [
-                "id_user": id
+                "id_user": userID
             ]
         }
     }
 }
 
 extension Auth {
-    struct ChechIn: RequestRouter {
+    struct SingIn: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
         let path: String = "registerUser.json"
-        let userInfo: UserInfo
-        
+        let userData: UserData        
         var parameters: Parameters? {
             return [
-                "id_user": userInfo.id,
-                "username": userInfo.userName,
-                "password": userInfo.password,
-                "email": userInfo.email,
-                "gender": userInfo.gender,
-                "credit_card": userInfo.creditCard,
-                "bio": userInfo.bio
-                
+                "id_user": userData.userID,
+                "username": userData.userName,
+                "password": userData.password,
+                "email": userData.email,
+                "gender": userData.gender,
+                "credit_card": userData.creditCard,
+                "bio": userData.bio
             ]
         }
     }

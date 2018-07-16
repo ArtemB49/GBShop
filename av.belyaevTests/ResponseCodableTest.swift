@@ -12,13 +12,11 @@ import Alamofire
 @testable import av_belyaev
 
 struct PostStub: Codable {
-    let userId: Int
-    let id: Int
+    let userID: Int
+    let postID: Int
     let title: String
     let body: String
 }
-
-
 
 class ResponseCodableTest: XCTestCase {
     
@@ -39,15 +37,26 @@ class ResponseCodableTest: XCTestCase {
         
         let exp = expectation(description: "")
         
-        var post: PostStub?
+        var post: RegistrationResult?
         
-        Alamofire
-            .request("https://jsonplaceholder.typicode.com/posts/1")
-            .respondeCodable(errorParser: errorParser){ (response: DataResponse<PostStub>) in
+        let parameters: [String: Any] = [
+            "id_user": 1,
+            "username": "bob",
+            "password": "bob"
+        ]
+        
+        Alamofire.request(
+            "http://localhost:8181/register",
+            method: .post,
+            parameters: parameters,
+            encoding: JSONEncoding.default
+            )
+            .respondeCodable(errorParser: errorParser) {(response: DataResponse<RegistrationResult>) in
                 
                 post = response.value
                 exp.fulfill()
-        }
+            }
+        
         wait(for: [exp], timeout: 5)
         XCTAssertNotNil(post)
     }

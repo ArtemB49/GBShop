@@ -32,7 +32,7 @@ class CatalogReguestFactoryTests: XCTestCase {
     func testCatalogAll() {
         let exp = expectation(description: "")
 
-        stub(condition: isMethodGET() && pathEndsWith("catalogData.json")) { request in
+        stub(condition: isMethodGET() && pathEndsWith("catalogData.json")) { _ in
 
             let fileUrl = Bundle.main.url(forResource: "Catalog", withExtension: "json")!
 
@@ -42,7 +42,7 @@ class CatalogReguestFactoryTests: XCTestCase {
                     headers: nil)
         }
 
-        var result: [ProductLight]?
+        var result: [ProductSimpleResult]?
 
         catalog?.getCatalog(pageNumber: 1, categoryID: 1) { request in
             result = request.value
@@ -56,7 +56,7 @@ class CatalogReguestFactoryTests: XCTestCase {
     func testProduct() {
         let exp = expectation(description: "")
         
-        stub(condition: isMethodGET() && pathEndsWith("getGoodById.json")) { request in
+        stub(condition: isMethodGET() && pathEndsWith("getGoodById.json")) { _ in
             
             let fileUrl = Bundle.main.url(forResource: "Product", withExtension: "json")!
             
@@ -66,7 +66,7 @@ class CatalogReguestFactoryTests: XCTestCase {
                 headers: nil)
         }
         
-        var result: ProductFull?
+        var result: ProductFullResult?
         
         catalog?.getProduct(id: 1) { request in
             result = request.value

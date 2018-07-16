@@ -1,5 +1,5 @@
 //
-//  CatalogResult.swift
+//  ProductFull.swift
 //  av.belyaev
 //
 //  Created by Артем Б on 14.07.2018.
@@ -8,15 +8,16 @@
 
 import Foundation
 
-
-struct ProductLight: Codable {
-    let id: Int
+struct ProductFullResult: Codable {
+    let result: Int
     let name: String
     let price: Int
+    let description: String
     
     enum CodingKeys: String, CodingKey {
-        case id = "id_product"
+        case result = "result"
         case name = "product_name"
-        case price = "price"
-    }
+        case price = "product_price"
+        case description = "product_description"
+    }    
 }

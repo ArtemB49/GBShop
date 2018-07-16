@@ -14,6 +14,7 @@ import OHHTTPStubs
 
 class AuthRequestFactoryTests: XCTestCase {
     
+    
     var auth: AuthRequestFactory?
     
     override func setUp() {
@@ -31,7 +32,7 @@ class AuthRequestFactoryTests: XCTestCase {
     func testAuth() {
         let exp = expectation(description: "")
         
-        stub(condition: isMethodGET() && pathEndsWith("login.json")) { request in
+        stub(condition: isMethodGET() && pathEndsWith("login.json")) { _ in
             
             let fileUrl = Bundle.main.url(forResource: "Login", withExtension: "json")!
             
@@ -45,7 +46,7 @@ class AuthRequestFactoryTests: XCTestCase {
         auth?.login(
             userName: "bob",
             password: "123"
-        ){ result in
+        ) { result in
             user = result.value
             exp.fulfill()
         }
@@ -57,7 +58,7 @@ class AuthRequestFactoryTests: XCTestCase {
     func testLogout() {
         let exp = expectation(description: "")
         
-        stub(condition: isMethodGET() && pathEndsWith("logout.json")) { request in
+        stub(condition: isMethodGET() && pathEndsWith("logout.json")) { _ in
             
             let fileUrl = Bundle.main.url(forResource: "Logout", withExtension: "json")!
             
@@ -68,7 +69,7 @@ class AuthRequestFactoryTests: XCTestCase {
         }
         
         var logoutResult: LogoutResult?
-        auth?.logout(userID: 1){ result in
+        auth?.logout(userID: 1) { result in
             logoutResult = result.value
             exp.fulfill()
         }
@@ -80,7 +81,7 @@ class AuthRequestFactoryTests: XCTestCase {
     func testRegister() {
         let exp = expectation(description: "")
         
-        stub(condition: isMethodGET() && pathEndsWith("registerUser.json")) { request in
+        stub(condition: isMethodGET() && pathEndsWith("registerUser.json")) { _ in
             
             let fileUrl = Bundle.main.url(forResource: "Register", withExtension: "json")!
             
@@ -91,7 +92,7 @@ class AuthRequestFactoryTests: XCTestCase {
         }
         
         var result: RegistrationResult?
-        let userInfo = UserInfo(
+        let userData = UserData(
             id: 322,
             userName: "bob",
             password: "boec",
@@ -100,7 +101,7 @@ class AuthRequestFactoryTests: XCTestCase {
             creditCard: "3222_8777_9999_7777",
             bio: "Hello, I am Bob"
         )
-        auth?.registration(userInfo: userInfo){ request in
+        auth?.registration(userData: userData) { request in
             result = request.value
             exp.fulfill()
             

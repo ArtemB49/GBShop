@@ -7,6 +7,8 @@ target 'av.belyaev' do
 
   pod 'Alamofire', '~> 4.7'
   pod 'OHHTTPStubs/Swift'
+  pod 'SwiftLint'
+  
   # Pods for av.belyaev
 
   target 'av.belyaevTests' do

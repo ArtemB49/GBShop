@@ -13,11 +13,11 @@ protocol CatalogRequestFactory {
     func getCatalog(
         pageNumber: Int,
         categoryID: Int,
-        completionHandler: @escaping (DataResponse<[ProductLight]>) -> Void
-    )
+        completionHandler: @escaping (DataResponse<[ProductSimpleResult]>) -> Void
+        )
     
     func getProduct(
-        id: Int,
-        completionHandler: @escaping (DataResponse<ProductFull>) -> Void
-    )
+        productID: Int,
+        completionHandler: @escaping (DataResponse<ProductFullResult>) -> Void
+        )
 }

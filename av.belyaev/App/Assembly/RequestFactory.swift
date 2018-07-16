@@ -1,16 +1,9 @@
-//
-//  RequestFactory.swift
-//  av.belyaev
-//
-//  Created by Артем Б on 08.07.2018.
-//  Copyright © 2018 Артем Б. All rights reserved.
-//
+/* Фабрика запросов */
 
 import Foundation
 import Alamofire
 
 class RequestFactory {
-    
     func makeErrorParser() -> AbsrtactErrorParser {
         return ErrorParser()
     }
@@ -25,7 +18,7 @@ class RequestFactory {
     
     let sessionQueue = DispatchQueue.global(qos: .utility)
     
-    func makeAuthRequestFactory<T>() -> T!{
+    func makeAuthRequestFactory<T>() -> T! {
         let errorParser = makeErrorParser()
         return Auth(
             errorParser: errorParser,
@@ -34,9 +27,9 @@ class RequestFactory {
     }
     
     
-    func makeModificationRequestFactory<T>() -> T! {
+    func makeChangeUserDataRequestFactory<T>() -> T! {
         let errorParser = makeErrorParser()
-        return UserData(
+        return UserProfile(
             errorParser: errorParser,
             sessionManager: commonSessionManager,
             queue: sessionQueue) as? T
@@ -50,5 +43,11 @@ class RequestFactory {
             queue: sessionQueue) as? T
     }
     
-
+    func makeReviewsRequestFactory<T>() -> T! {
+        let errorParser = makeErrorParser()
+        return Reviews(
+            errorParser: errorParser,
+            sessionManager: commonSessionManager,
+            queue: sessionQueue) as? T
+    }
 }

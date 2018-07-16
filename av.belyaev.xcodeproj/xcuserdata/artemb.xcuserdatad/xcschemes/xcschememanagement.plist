@@ -9,35 +9,35 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>AuthRequestFactoryTests.testAuth.xcscheme</key>
+		<key>UserDataRequestFactoryMockServerTests.testChangeUserData.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
-		<key>UserDataRequestFactoryTests.testChangeProfile.xcscheme</key>
+		<key>CatalogRequestFactoryMockServerTests.testCatalogAll.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
-		<key>AuthRequestFactoryTests.xcscheme</key>
+		<key>CatalogRequestFactoryMockServerTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
-		<key>CatalogReguestFactoryTests.xcscheme</key>
+		<key>ReviewReguestFactoryTests.testAddReview.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
-		<key>AuthRequestFactoryTests.testLogout.xcscheme</key>
+		<key>ReviewReguestFactoryTests.testDeleteReview.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />

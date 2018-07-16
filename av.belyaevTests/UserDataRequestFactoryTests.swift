@@ -12,24 +12,24 @@ import OHHTTPStubs
 class UserDataRequestFactoryTests: XCTestCase {
 
 
-    var userData: UserDataRequestFactory?
+    var userProfile: UserProfileRequestFactory?
 
     override func setUp() {
         super.setUp()
         let factory = RequestFactoryMock()
-        userData = factory.makeModificationRequestFactory()
+        userProfile = factory.makeChangeUserDataRequestFactory()
     }
 
     override func tearDown() {
         super.tearDown()
-        userData = nil
+        userProfile = nil
         OHHTTPStubs.removeAllStubs()
     }
 
     func testChangeProfile() {
         let exp = expectation(description: "")
 
-        stub(condition: isMethodGET() && pathEndsWith("changeUserData.json")) { request in
+        stub(condition: isMethodGET() && pathEndsWith("changeUserData.json")) { _ in
 
             let fileUrl = Bundle.main.url(forResource: "ChangeUserData", withExtension: "json")!
 
@@ -39,8 +39,8 @@ class UserDataRequestFactoryTests: XCTestCase {
                     headers: nil)
         }
 
-        var result: ModificationResult?
-        let userInfo = UserInfo(
+        var result: ChangeUserDataResult?
+        let userData = UserData(
                 id: 322,
                 userName: "ivan",
                 password: "good",
@@ -49,7 +49,7 @@ class UserDataRequestFactoryTests: XCTestCase {
                 creditCard: "3222_8777_9999_7777",
                 bio: "Hello, I am Ivan"
         )
-        userData?.editUserData(userInfo: userInfo){ response in
+        userProfile?.changeUserData(userData: userData) { response in
             
             result = response.value
             exp.fulfill()

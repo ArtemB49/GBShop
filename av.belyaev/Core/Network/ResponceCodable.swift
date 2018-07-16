@@ -16,8 +16,8 @@ extension DataRequest {
         queue: DispatchQueue? = nil,
         completionHandler: @escaping (DataResponse<T>) -> Void)
         -> Self {
-        let responseSeriaizer = DataResponseSerializer<T> { request, response, data, error in
-            if let error = errorParser.parse(responce: response, data: data, error: error){
+        let responseSeriaizer = DataResponseSerializer<T> { _, response, data, error in
+            if let error = errorParser.parse(responce: response, data: data, error: error) {
                 return .failure(error)
             }
             let result = Request.serializeResponseData(response: response, data: data, error: nil)

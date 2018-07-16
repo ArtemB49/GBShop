@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct UserInfo {
-    let id: Int
+struct UserData {
+    let userID: Int
     let userName: String
     let password: String
     let email: String

@@ -10,13 +10,16 @@ import Foundation
 import Alamofire
 
 class Catalog: BaseRequestFactory, CatalogRequestFactory {
-    func getCatalog(pageNumber: Int, categoryID: Int, completionHandler: @escaping (DataResponse<[ProductLight]>) -> Void) {
+    func getCatalog(
+        pageNumber: Int,
+        categoryID: Int,
+        completionHandler: @escaping (DataResponse<[ProductSimpleResult]>) -> Void ) {
         let requestModel = CatalogAll(baseUrl: baseUrl, pageNumber: pageNumber, categoryID: categoryID)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
-    func getProduct(id: Int, completionHandler: @escaping (DataResponse<ProductFull>) -> Void) {
-        let requestModel = Product(baseUrl: baseUrl, id: id)
+    func getProduct(productID: Int, completionHandler: @escaping (DataResponse<ProductFullResult>) -> Void) {
+        let requestModel = Product(baseUrl: baseUrl, productID: productID)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
@@ -45,11 +48,11 @@ extension Catalog {
         let baseUrl: URL
         let method: HTTPMethod = .get
         let path: String = "getGoodById.json"
-        let id: Int
+        let productID: Int
         
         var parameters: Parameters? {
             return [
-                "id_product": id
+                "id_product": productID
             ]
         }
     }
