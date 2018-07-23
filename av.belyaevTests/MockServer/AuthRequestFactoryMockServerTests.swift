@@ -1,4 +1,6 @@
-/* Тестирование Авторизации через Mock Server*/
+/**
+ * Тестирование запросов авторизации используя мок сервер
+ */
 
 import Foundation
 import XCTest
@@ -39,7 +41,7 @@ class AuthRequestFactoryMockServerTests: XCTestCase {
             parameters: parameters,
             encoding: JSONEncoding.default
             )
-            .respondeCodable(errorParser: errorParser) {(response: DataResponse<LoginResult>) in
+            .responseCodable(errorParser: errorParser) {(response: DataResponse<LoginResult>) in
                 
                 loginResult = response.value
                 exp.fulfill()
@@ -62,7 +64,7 @@ class AuthRequestFactoryMockServerTests: XCTestCase {
             parameters: parameters,
             encoding: JSONEncoding.default
             )
-            .respondeCodable(errorParser: errorParser) {(response: DataResponse<LogoutResult>) in
+            .responseCodable(errorParser: errorParser) {(response: DataResponse<LogoutResult>) in
 
                 logoutResult = response.value
                 exp.fulfill()
@@ -91,7 +93,7 @@ class AuthRequestFactoryMockServerTests: XCTestCase {
                         parameters: parameters,
                         encoding: JSONEncoding.default
                 )
-                .respondeCodable(errorParser: errorParser) {(response: DataResponse<RegistrationResult>) in
+                .responseCodable(errorParser: errorParser) {(response: DataResponse<RegistrationResult>) in
 
                     registerResult = response.value
                     exp.fulfill()

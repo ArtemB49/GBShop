@@ -1,10 +1,6 @@
-//
-//  AuthRequestFactory.swift
-//  av.belyaev
-//
-//  Created by Артем Б on 08.07.2018.
-//  Copyright © 2018 Артем Б. All rights reserved.
-//
+/**
+* Фабрика авторизации
+*/
 
 import Foundation
 import Alamofire

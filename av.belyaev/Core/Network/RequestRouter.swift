@@ -1,10 +1,6 @@
-//
-//  RequestRouter.swift
-//  av.belyaev
-//
-//  Created by Артем Б on 08.07.2018.
-//  Copyright © 2018 Артем Б. All rights reserved.
-//
+/**
+* Протокол роутера запросов
+*/
 
 import Foundation
 import Alamofire

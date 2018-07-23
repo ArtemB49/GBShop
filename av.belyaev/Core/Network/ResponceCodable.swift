@@ -1,23 +1,19 @@
-//
-//  ResponceCodable.swift
-//  av.belyaev
-//
-//  Created by Артем Б on 08.07.2018.
-//  Copyright © 2018 Артем Б. All rights reserved.
-//
+/**
+*
+*/
 
 import Foundation
 import Alamofire
 
 extension DataRequest {
     @discardableResult
-    func respondeCodable<T: Decodable> (
-        errorParser: AbsrtactErrorParser,
+    func responseCodable<T: Decodable> (
+        errorParser: AbstractErrorParser,
         queue: DispatchQueue? = nil,
         completionHandler: @escaping (DataResponse<T>) -> Void)
         -> Self {
-        let responseSeriaizer = DataResponseSerializer<T> { _, response, data, error in
-            if let error = errorParser.parse(responce: response, data: data, error: error) {
+        let responseSerializer = DataResponseSerializer<T> { _, response, data, error in
+            if let error = errorParser.parse(response: response, data: data, error: error) {
                 return .failure(error)
             }
             let result = Request.serializeResponseData(response: response, data: data, error: nil)
@@ -36,7 +32,7 @@ extension DataRequest {
                 
             }
         }
-        return response(queue: queue, responseSerializer: responseSeriaizer, completionHandler: completionHandler)
+        return response(queue: queue, responseSerializer: responseSerializer, completionHandler: completionHandler)
         
     }
 }

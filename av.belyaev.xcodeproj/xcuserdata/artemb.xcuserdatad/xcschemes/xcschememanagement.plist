@@ -7,37 +7,37 @@
 		<key>av.belyaev.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>0</integer>
 		</dict>
-		<key>UserDataRequestFactoryMockServerTests.testChangeUserData.xcscheme</key>
+		<key>BasketReguestFactoryTests.testAddProduct.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
-		<key>CatalogRequestFactoryMockServerTests.testCatalogAll.xcscheme</key>
+		<key>UserDataRequestFactoryTests.testChangeProfile.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
-		<key>CatalogRequestFactoryMockServerTests.xcscheme</key>
+		<key>BasketReguestFactoryTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
-		<key>ReviewReguestFactoryTests.testAddReview.xcscheme</key>
+		<key>BasketReguestFactoryTests.testDeleteProductFromBasket.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
-		<key>ReviewReguestFactoryTests.testDeleteReview.xcscheme</key>
+		<key>ResponseCodableTest.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />

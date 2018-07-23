@@ -1,10 +1,12 @@
-/* Фабрика запросов */
+/**
+* Фабрика запросов
+*/
 
 import Foundation
 import Alamofire
 
 class RequestFactory {
-    func makeErrorParser() -> AbsrtactErrorParser {
+    func makeErrorParser() -> AbstractErrorParser {
         return ErrorParser()
     }
     
@@ -46,6 +48,14 @@ class RequestFactory {
     func makeReviewsRequestFactory<T>() -> T! {
         let errorParser = makeErrorParser()
         return Reviews(
+            errorParser: errorParser,
+            sessionManager: commonSessionManager,
+            queue: sessionQueue) as? T
+    }
+    
+    func makeBasketRequestFactory<T>() -> T! {
+        let errorParser = makeErrorParser()
+        return Basket(
             errorParser: errorParser,
             sessionManager: commonSessionManager,
             queue: sessionQueue) as? T

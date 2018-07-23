@@ -1,10 +1,6 @@
-//
-//  RequestFactory.swift
-//  av.belyaev
-//
-//  Created by Артем Б on 08.07.2018.
-//  Copyright © 2018 Артем Б. All rights reserved.
-//
+/**
+ * Фабрика заросов тестирование
+ */
 
 import Foundation
 import Alamofire
@@ -13,7 +9,7 @@ import OHHTTPStubs
 
 class RequestFactoryMock {
     
-    func makeErrorParser() -> AbsrtactErrorParser {
+    func makeErrorParser() -> AbstractErrorParser {
         return ErrorParserStubs()
     }
     
@@ -59,5 +55,12 @@ class RequestFactoryMock {
             sessionManager: commonSessionManager,
             queue: sessionQueue) as? T
     }
-
+    
+    func makeBasketRequestFactory<T>() -> T! {
+        let errorParser = makeErrorParser()
+        return Basket(
+            errorParser: errorParser,
+            sessionManager: commonSessionManager,
+            queue: sessionQueue) as? T
+    }
 }

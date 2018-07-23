@@ -1,14 +1,10 @@
-//
-//  AbstractErrorParser.swift
-//  av.belyaev
-//
-//  Created by Артем Б on 08.07.2018.
-//  Copyright © 2018 Артем Б. All rights reserved.
-//
+/**
+* Протокол ошибок парсинга
+*/
 
 import Foundation
 
-protocol AbsrtactErrorParser {
+protocol AbstractErrorParser {
     func parse(_ result: Error) -> Error
-    func parse(responce: HTTPURLResponse?, data: Data?, error: Error?) -> Error?
+    func parse(response: HTTPURLResponse?, data: Data?, error: Error?) -> Error?
 }

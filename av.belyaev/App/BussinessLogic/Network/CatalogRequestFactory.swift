@@ -1,15 +1,12 @@
-//
-//  CatalogRequestFactory.swift
-//  av.belyaev
-//
-//  Created by Артем Б on 14.07.2018.
-//  Copyright © 2018 Артем Б. All rights reserved.
-//
+/**
+* Фабрика запросов для работы с каталогом
+*/
 
 import Foundation
 import Alamofire
 
 protocol CatalogRequestFactory {
+
     func getCatalog(
         pageNumber: Int,
         categoryID: Int,

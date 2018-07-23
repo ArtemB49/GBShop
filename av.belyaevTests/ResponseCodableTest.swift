@@ -1,10 +1,6 @@
-//
-//  ResponseCodableTest.swift
-//  av.belyaevTests
-//
-//  Created by Артем Б on 14.07.2018.
-//  Copyright © 2018 Артем Б. All rights reserved.
-//
+/**
+ * Тестирование запросов регистрации
+ */
 
 import Foundation
 import XCTest
@@ -51,7 +47,7 @@ class ResponseCodableTest: XCTestCase {
             parameters: parameters,
             encoding: JSONEncoding.default
             )
-            .respondeCodable(errorParser: errorParser) {(response: DataResponse<RegistrationResult>) in
+            .responseCodable(errorParser: errorParser) {(response: DataResponse<RegistrationResult>) in
                 
                 post = response.value
                 exp.fulfill()

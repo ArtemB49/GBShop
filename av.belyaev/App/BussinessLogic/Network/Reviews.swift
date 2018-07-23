@@ -1,10 +1,6 @@
-//
-//  Review.swift
-//  av.belyaev
-//
-//  Created by Артем Б on 15.07.2018.
-//  Copyright © 2018 Артем Б. All rights reserved.
-//
+/**
+* Основа для фабрик запросов
+*/
 
 import Foundation
 import Alamofire
@@ -18,7 +14,7 @@ class Reviews: BaseRequestFactory, ReviewRequestFactory {
     func addReview(
         userID: Int,
         textReview: String,
-        completionHandler: @escaping (DataResponse<AddReviewResult>) -> Void ) {
+        completionHandler: @escaping (DataResponse<AddingReviewResult>) -> Void ) {
         let requestModel = AddReview(baseUrl: baseUrl, userID: userID, textReview: textReview)
         self.request(request: requestModel, completionHandler: completionHandler)
     }

@@ -1,10 +1,6 @@
-//
-//  Catalog.swift
-//  av.belyaev
-//
-//  Created by Артем Б on 14.07.2018.
-//  Copyright © 2018 Артем Б. All rights reserved.
-//
+/**
+* Реализаци фабрики работы с каталогом
+*/
 
 import Foundation
 import Alamofire
@@ -13,12 +9,20 @@ class Catalog: BaseRequestFactory, CatalogRequestFactory {
     func getCatalog(
         pageNumber: Int,
         categoryID: Int,
-        completionHandler: @escaping (DataResponse<[ProductSimpleResult]>) -> Void ) {
-        let requestModel = CatalogAll(baseUrl: baseUrl, pageNumber: pageNumber, categoryID: categoryID)
+        completionHandler: @escaping (DataResponse<[ProductSimpleResult]>) -> Void
+    ) {
+        let requestModel = CatalogAll(
+                baseUrl: baseUrl,
+                pageNumber: pageNumber,
+                categoryID: categoryID
+        )
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
-    func getProduct(productID: Int, completionHandler: @escaping (DataResponse<ProductFullResult>) -> Void) {
+    func getProduct(
+            productID: Int,
+            completionHandler: @escaping (DataResponse<ProductFullResult>) -> Void
+    ) {
         let requestModel = Product(baseUrl: baseUrl, productID: productID)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
@@ -33,7 +37,6 @@ extension Catalog {
         let path: String = "catalogData.json"
         let pageNumber: Int
         let categoryID: Int
-        
         var parameters: Parameters? {
             return [
                 "page_number": pageNumber,
@@ -49,7 +52,6 @@ extension Catalog {
         let method: HTTPMethod = .get
         let path: String = "getGoodById.json"
         let productID: Int
-        
         var parameters: Parameters? {
             return [
                 "id_product": productID

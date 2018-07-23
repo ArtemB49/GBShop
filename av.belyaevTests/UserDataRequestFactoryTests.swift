@@ -1,7 +1,7 @@
-//
-// Created by Артем Б on 14.07.2018.
-// Copyright (c) 2018 Артем Б. All rights reserved.
-//
+/**
+ * Тестирование запросов данных пользователя используя OHHTTPStubs
+ */
+
 
 import Foundation
 import XCTest
@@ -41,7 +41,7 @@ class UserDataRequestFactoryTests: XCTestCase {
 
         var result: ChangeUserDataResult?
         let userData = UserData(
-                id: 322,
+                userID: 322,
                 userName: "ivan",
                 password: "good",
                 email: "bbo@bob.ru",

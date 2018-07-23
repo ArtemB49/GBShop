@@ -1,6 +1,6 @@
-/*
- 
- */
+/**
+* Фабрика запросов Отзывов
+*/
 import Foundation
 import Alamofire
 
@@ -15,7 +15,7 @@ protocol ReviewRequestFactory {
     func addReview(
         userID: Int,
         textReview: String,
-        completionHandler: @escaping (DataResponse<AddReviewResult>) -> Void
+        completionHandler: @escaping (DataResponse<AddingReviewResult>) -> Void
         )
     
     func deleteReview(

@@ -38,13 +38,23 @@
 		AE6ADF5020FBC461007036EC /* ReviewResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF4F20FBC461007036EC /* ReviewResult.swift */; };
 		AE6ADF5220FBC65E007036EC /* ReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF5120FBC65E007036EC /* ReviewRequestFactory.swift */; };
 		AE6ADF5420FBC7A6007036EC /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF5320FBC7A6007036EC /* Reviews.swift */; };
-		AE6ADF5620FCF2C5007036EC /* AddReviewResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF5520FCF2C5007036EC /* AddReviewResult.swift */; };
+		AE6ADF5620FCF2C5007036EC /* AddingReviewResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF5520FCF2C5007036EC /* AddingReviewResult.swift */; };
 		AE6ADF5820FCF531007036EC /* DeleteReviewResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF5720FCF531007036EC /* DeleteReviewResult.swift */; };
 		AE6ADF5A20FCF68F007036EC /* ReviewReguestFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF5920FCF68F007036EC /* ReviewReguestFactoryTests.swift */; };
 		AE6ADF5C20FCF7B6007036EC /* AddReview.json in Resources */ = {isa = PBXBuildFile; fileRef = AE6ADF5B20FCF7B6007036EC /* AddReview.json */; };
 		AE6ADF5E20FCF7F9007036EC /* DeleteReview.json in Resources */ = {isa = PBXBuildFile; fileRef = AE6ADF5D20FCF7F9007036EC /* DeleteReview.json */; };
 		AE6ADF5F20FCF933007036EC /* AddReview.json in Resources */ = {isa = PBXBuildFile; fileRef = AE6ADF5B20FCF7B6007036EC /* AddReview.json */; };
 		AE6ADF6020FCF933007036EC /* DeleteReview.json in Resources */ = {isa = PBXBuildFile; fileRef = AE6ADF5D20FCF7F9007036EC /* DeleteReview.json */; };
+		AE6ADF632105C2D0007036EC /* AddingProductBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF622105C2D0007036EC /* AddingProductBasketResult.swift */; };
+		AE6ADF652105C765007036EC /* DeleteProductBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF642105C765007036EC /* DeleteProductBasketResult.swift */; };
+		AE6ADF672105C9E7007036EC /* BasketRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF662105C9E7007036EC /* BasketRequestFactory.swift */; };
+		AE6ADF692105CD85007036EC /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF682105CD85007036EC /* Basket.swift */; };
+		AE6ADF6B21060075007036EC /* PaidOrderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF6A21060075007036EC /* PaidOrderResult.swift */; };
+		AE6ADF6D21060335007036EC /* BasketRequestFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF6C21060335007036EC /* BasketRequestFactoryTests.swift */; };
+		AE6ADF6F210605EA007036EC /* AddToBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = AE6ADF6E210605EA007036EC /* AddToBasket.json */; };
+		AE6ADF712106067E007036EC /* DeleteFromBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = AE6ADF702106067E007036EC /* DeleteFromBasket.json */; };
+		AE6ADF7221061C8A007036EC /* AddToBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = AE6ADF6E210605EA007036EC /* AddToBasket.json */; };
+		AE6ADF7321061C8A007036EC /* DeleteFromBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = AE6ADF702106067E007036EC /* DeleteFromBasket.json */; };
 		AEA23FE820F2589800D755B0 /* AbstractRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA23FE720F2589800D755B0 /* AbstractRequestFactory.swift */; };
 		AEA23FEA20F25AEE00D755B0 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA23FE920F25AEE00D755B0 /* RequestRouter.swift */; };
 		AEA23FED20F26A0400D755B0 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA23FEC20F26A0400D755B0 /* LoginResult.swift */; };
@@ -120,11 +130,19 @@
 		AE6ADF4F20FBC461007036EC /* ReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewResult.swift; sourceTree = "<group>"; };
 		AE6ADF5120FBC65E007036EC /* ReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequestFactory.swift; sourceTree = "<group>"; };
 		AE6ADF5320FBC7A6007036EC /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
-		AE6ADF5520FCF2C5007036EC /* AddReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewResult.swift; sourceTree = "<group>"; };
+		AE6ADF5520FCF2C5007036EC /* AddingReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingReviewResult.swift; sourceTree = "<group>"; };
 		AE6ADF5720FCF531007036EC /* DeleteReviewResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteReviewResult.swift; sourceTree = "<group>"; };
 		AE6ADF5920FCF68F007036EC /* ReviewReguestFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewReguestFactoryTests.swift; sourceTree = "<group>"; };
 		AE6ADF5B20FCF7B6007036EC /* AddReview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AddReview.json; sourceTree = "<group>"; };
 		AE6ADF5D20FCF7F9007036EC /* DeleteReview.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DeleteReview.json; sourceTree = "<group>"; };
+		AE6ADF622105C2D0007036EC /* AddingProductBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingProductBasketResult.swift; sourceTree = "<group>"; };
+		AE6ADF642105C765007036EC /* DeleteProductBasketResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductBasketResult.swift; sourceTree = "<group>"; };
+		AE6ADF662105C9E7007036EC /* BasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRequestFactory.swift; sourceTree = "<group>"; };
+		AE6ADF682105CD85007036EC /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
+		AE6ADF6A21060075007036EC /* PaidOrderResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaidOrderResult.swift; sourceTree = "<group>"; };
+		AE6ADF6C21060335007036EC /* BasketRequestFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRequestFactoryTests.swift; sourceTree = "<group>"; };
+		AE6ADF6E210605EA007036EC /* AddToBasket.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AddToBasket.json; sourceTree = "<group>"; };
+		AE6ADF702106067E007036EC /* DeleteFromBasket.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DeleteFromBasket.json; sourceTree = "<group>"; };
 		AEA23FE720F2589800D755B0 /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequestFactory.swift; sourceTree = "<group>"; };
 		AEA23FE920F25AEE00D755B0 /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
 		AEA23FEC20F26A0400D755B0 /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
@@ -258,6 +276,7 @@
 				AC02C9F959C959C13E78ED42 /* UserDataRequestFactoryTests.swift */,
 				AE4629B520FA426700193626 /* CatalogReguestFactoryTests.swift */,
 				AE6ADF5920FCF68F007036EC /* ReviewReguestFactoryTests.swift */,
+				AE6ADF6C21060335007036EC /* BasketRequestFactoryTests.swift */,
 			);
 			path = av.belyaevTests;
 			sourceTree = "<group>";
@@ -334,6 +353,8 @@
 				AE4629B320FA41FE00193626 /* Product.json */,
 				AE6ADF5B20FCF7B6007036EC /* AddReview.json */,
 				AE6ADF5D20FCF7F9007036EC /* DeleteReview.json */,
+				AE6ADF6E210605EA007036EC /* AddToBasket.json */,
+				AE6ADF702106067E007036EC /* DeleteFromBasket.json */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -349,8 +370,11 @@
 				AE4629AB20FA303400193626 /* ProductSimpleResult.swift */,
 				AE4629AD20FA320100193626 /* ProductFullResult.swift */,
 				AE6ADF4F20FBC461007036EC /* ReviewResult.swift */,
-				AE6ADF5520FCF2C5007036EC /* AddReviewResult.swift */,
+				AE6ADF5520FCF2C5007036EC /* AddingReviewResult.swift */,
 				AE6ADF5720FCF531007036EC /* DeleteReviewResult.swift */,
+				AE6ADF622105C2D0007036EC /* AddingProductBasketResult.swift */,
+				AE6ADF642105C765007036EC /* DeleteProductBasketResult.swift */,
+				AE6ADF6A21060075007036EC /* PaidOrderResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -375,6 +399,8 @@
 				AE4629A920FA2CF700193626 /* Catalog.swift */,
 				AE6ADF5120FBC65E007036EC /* ReviewRequestFactory.swift */,
 				AE6ADF5320FBC7A6007036EC /* Reviews.swift */,
+				AE6ADF662105C9E7007036EC /* BasketRequestFactory.swift */,
+				AE6ADF682105CD85007036EC /* Basket.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -514,6 +540,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE6ADF7221061C8A007036EC /* AddToBasket.json in Resources */,
+				AE6ADF7321061C8A007036EC /* DeleteFromBasket.json in Resources */,
 				AE6ADF5F20FCF933007036EC /* AddReview.json in Resources */,
 				AE6ADF6020FCF933007036EC /* DeleteReview.json in Resources */,
 				AE4629B720FA450F00193626 /* Catalog.json in Resources */,
@@ -535,10 +563,12 @@
 				AE4629B420FA41FE00193626 /* Product.json in Resources */,
 				AEA27C3C20FA14A5006BB525 /* Register.json in Resources */,
 				AE6ADF5C20FCF7B6007036EC /* AddReview.json in Resources */,
+				AE6ADF6F210605EA007036EC /* AddToBasket.json in Resources */,
 				AE4629B020FA3E5500193626 /* Catalog.json in Resources */,
 				AEA27C3820FA0B52006BB525 /* Login.json in Resources */,
 				AE6ADF5E20FCF7F9007036EC /* DeleteReview.json in Resources */,
 				AEA27C3A20FA1320006BB525 /* Logout.json in Resources */,
+				AE6ADF712106067E007036EC /* DeleteFromBasket.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,8 +760,10 @@
 				AEB394E420F3BEEA00245DAA /* LogoutResult.swift in Sources */,
 				AE6ADF5820FCF531007036EC /* DeleteReviewResult.swift in Sources */,
 				AE6ADF5220FBC65E007036EC /* ReviewRequestFactory.swift in Sources */,
+				AE6ADF692105CD85007036EC /* Basket.swift in Sources */,
 				AEA23FEA20F25AEE00D755B0 /* RequestRouter.swift in Sources */,
 				AEA27C2D20F9E782006BB525 /* UserInfo.swift in Sources */,
+				AE6ADF632105C2D0007036EC /* AddingProductBasketResult.swift in Sources */,
 				AE214ADC20F2526D003F960D /* ResponceCodable.swift in Sources */,
 				AE214ADA20F24FB3003F960D /* ErrorParser.swift in Sources */,
 				AEA27C2B20F9E11A006BB525 /* BaseRequestFactory.swift in Sources */,
@@ -739,14 +771,17 @@
 				AEB394D520F2740100245DAA /* RequestFactory.swift in Sources */,
 				AEB394DA20F3AADA00245DAA /* RegistrationResult.swift in Sources */,
 				AE4629AA20FA2CF700193626 /* Catalog.swift in Sources */,
+				AE6ADF652105C765007036EC /* DeleteProductBasketResult.swift in Sources */,
 				AE6ADF5420FBC7A6007036EC /* Reviews.swift in Sources */,
 				AEB394D020F26BC100245DAA /* AuthRequestFactory.swift in Sources */,
 				AEA23FED20F26A0400D755B0 /* LoginResult.swift in Sources */,
 				AEB394DE20F3B32200245DAA /* UserProfileRequestFactory.swift in Sources */,
 				AEA27C2920F9E0F8006BB525 /* UserProfile.swift in Sources */,
 				AE6ADF5020FBC461007036EC /* ReviewResult.swift in Sources */,
+				AE6ADF672105C9E7007036EC /* BasketRequestFactory.swift in Sources */,
 				AEB394D220F26CC000245DAA /* Auth.swift in Sources */,
-				AE6ADF5620FCF2C5007036EC /* AddReviewResult.swift in Sources */,
+				AE6ADF6B21060075007036EC /* PaidOrderResult.swift in Sources */,
+				AE6ADF5620FCF2C5007036EC /* AddingReviewResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -755,6 +790,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE6ADF5A20FCF68F007036EC /* ReviewReguestFactoryTests.swift in Sources */,
+				AE6ADF6D21060335007036EC /* BasketRequestFactoryTests.swift in Sources */,
 				AEA27C3520FA04B7006BB525 /* AuthRequestFactoryTests.swift in Sources */,
 				AE4629B620FA426700193626 /* CatalogReguestFactoryTests.swift in Sources */,
 				AEA27C3120FA02E0006BB525 /* RequestFactoryMock.swift in Sources */,

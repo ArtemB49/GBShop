@@ -1,10 +1,6 @@
-//
-//  CatalogReguestFactoryTests.swift
-//  av.belyaevTests
-//
-//  Created by Артем Б on 14.07.2018.
-//  Copyright © 2018 Артем Б. All rights reserved.
-//
+/**
+ * Тестирование запросов каталога используя OHHTTPStubs
+ */
 
 import Foundation
 import XCTest
@@ -68,7 +64,7 @@ class CatalogReguestFactoryTests: XCTestCase {
         
         var result: ProductFullResult?
         
-        catalog?.getProduct(id: 1) { request in
+        catalog?.getProduct(productID: 1) { request in
             result = request.value
             exp.fulfill()
         }

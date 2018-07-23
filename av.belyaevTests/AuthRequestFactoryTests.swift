@@ -1,10 +1,6 @@
-//
-//  AuthRequestFactorytests.swift
-//  av.belyaevTests
-//
-//  Created by Артем Б on 14.07.2018.
-//  Copyright © 2018 Артем Б. All rights reserved.
-//
+/**
+ * Тестирование запросов авторизации используя OHHTTPStubs
+ */
 
 import Foundation
 import XCTest
@@ -93,7 +89,7 @@ class AuthRequestFactoryTests: XCTestCase {
         
         var result: RegistrationResult?
         let userData = UserData(
-            id: 322,
+            userID: 322,
             userName: "bob",
             password: "boec",
             email: "bbo@bob.ru",

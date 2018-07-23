@@ -1,4 +1,6 @@
-/* Тестирование запросов связанных с отзывами */
+/**
+ * Тестирование запросов отзывов используя OHHTTPStubs
+ */
 
 import Foundation
 import XCTest
@@ -36,7 +38,7 @@ class ReviewReguestFactoryTests: XCTestCase {
                 headers: nil)
         }
 
-        var addReviewResult: AddReviewResult?
+        var addReviewResult: AddingReviewResult?
 
         review?.addReview(
                 userID: 1,

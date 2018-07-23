@@ -1,7 +1,6 @@
-//
-// Created by Артем Б on 15.07.2018.
-// Copyright (c) 2018 Артем Б. All rights reserved.
-//
+/**
+ * Тестирование запросов данных пользователя используя мок сервер
+ */
 
 import Foundation
 import XCTest
@@ -45,7 +44,7 @@ class UserDataRequestFactoryMockServerTests: XCTestCase {
                         parameters: parameters,
                         encoding: JSONEncoding.default
                 )
-                .respondeCodable(errorParser: errorParser) {(response: DataResponse<ChangeUserDataResult>) in
+                .responseCodable(errorParser: errorParser) {(response: DataResponse<ChangeUserDataResult>) in
 
                     changeUserDataResult = response.value
                     exp.fulfill()

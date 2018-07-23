@@ -1,7 +1,6 @@
-//
-// Created by Артем Б on 15.07.2018.
-// Copyright (c) 2018 Артем Б. All rights reserved.
-//
+/**
+ * Тестирование запросов каталога товаров используя мок сервер
+ */
 
 import Foundation
 import XCTest
@@ -42,7 +41,7 @@ class CatalogRequestFactoryMockServerTests: XCTestCase {
                         parameters: parameters,
                         encoding: JSONEncoding.default
                 )
-                .respondeCodable(errorParser: errorParser) {(response: DataResponse<[ProductSimpleResult]>) in
+                .responseCodable(errorParser: errorParser) {(response: DataResponse<[ProductSimpleResult]>) in
 
                     listProductResult = response.value
                     exp.fulfill()
@@ -67,7 +66,7 @@ class CatalogRequestFactoryMockServerTests: XCTestCase {
                         parameters: parameters,
                         encoding: JSONEncoding.default
                 )
-                .respondeCodable(errorParser: errorParser) {(response: DataResponse<ProductFullResult>) in
+                .responseCodable(errorParser: errorParser) {(response: DataResponse<ProductFullResult>) in
 
                     productResult = response.value
                     exp.fulfill()

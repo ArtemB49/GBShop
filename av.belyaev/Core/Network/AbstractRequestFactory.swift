@@ -1,16 +1,12 @@
-//
-//  AbstractRequestFactory.swift
-//  av.belyaev
-//
-//  Created by Артем Б on 08.07.2018.
-//  Copyright © 2018 Артем Б. All rights reserved.
-//
+/**
+* Протокол фабрики запросов
+*/
 
 import Foundation
 import Alamofire
 
 protocol AbstractRequestFactory {
-    var errorParser: AbsrtactErrorParser { get }
+    var errorParser: AbstractErrorParser { get }
     var sessionManager: SessionManager { get }
     var queue: DispatchQueue? { get }
     
@@ -29,6 +25,6 @@ extension AbstractRequestFactory {
         -> DataRequest {
             return sessionManager
             .request(request)
-                .respondeCodable(errorParser: errorParser, queue: queue, completionHandler: completionHandler)
+                .responseCodable(errorParser: errorParser, queue: queue, completionHandler: completionHandler)
     }
 }
