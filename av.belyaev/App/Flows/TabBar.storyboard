@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y7c-6k-OPK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User-->
+        <scene sceneID="qUP-c4-WGc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="User" id="VbN-Q8-IpJ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="MtW-2p-IIt"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vaj-w8-Zeb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1178" y="203"/>
+        </scene>
+        <!--Catalog-->
+        <scene sceneID="gMn-o7-8d9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Catalog" id="Ry4-Px-N4X" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8vo-i9-Pn3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FCj-z8-c2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="94" y="667"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="vPW-OC-waZ">
+            <objects>
+                <tabBarController id="Y7c-6k-OPK" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oZi-MH-p5O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qer-gx-1WC" kind="relationship" relationship="viewControllers" id="0sD-Em-pej"/>
+                        <segue destination="TXo-hE-M55" kind="relationship" relationship="viewControllers" id="quB-go-Vx1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FtJ-Wc-KMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-566" y="-158"/>
+        </scene>
+        <!--Register-->
+        <scene sceneID="xI9-to-iGP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Register" id="qpx-16-jxB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="y1x-kJ-Lm3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d2K-eU-tau" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1156" y="-536"/>
+        </scene>
+        <!--Каталог-->
+        <scene sceneID="NnL-9u-Pqz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qer-gx-1WC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Каталог" image="catalog" id="iOD-bl-icq"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Jt-Se-g5H">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ry4-Px-N4X" kind="relationship" relationship="rootViewController" id="ncl-1w-JaA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ge-tN-WXQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-567" y="667"/>
+        </scene>
+        <!--Пользователь-->
+        <scene sceneID="Fl4-Dd-95G">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TXo-hE-M55" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Пользователь" image="username" id="iaL-Q1-aDZ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tt4-Xe-mQW">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VbN-Q8-IpJ" kind="relationship" relationship="rootViewController" id="OEy-rk-gbt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0uM-bx-z5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="329" y="204"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="catalog" width="25" height="25"/>
+        <image name="username" width="25" height="25"/>
+    </resources>
+</document>

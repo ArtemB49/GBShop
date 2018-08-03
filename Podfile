@@ -8,6 +8,7 @@ target 'av.belyaev' do
   pod 'Alamofire', '~> 4.7'
   pod 'OHHTTPStubs/Swift'
   pod 'SwiftLint'
+  pod 'SnapKit', '~> 4.0.0'
   
   # Pods for av.belyaev
 

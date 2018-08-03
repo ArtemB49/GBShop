@@ -21,6 +21,16 @@
 		AE41F9A420EB779F002D96E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE41F9A320EB779F002D96E6 /* Assets.xcassets */; };
 		AE41F9A720EB779F002D96E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE41F9A520EB779F002D96E6 /* LaunchScreen.storyboard */; };
 		AE41F9BD20EB779F002D96E6 /* av_belyaevUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41F9BC20EB779F002D96E6 /* av_belyaevUITests.swift */; };
+		AE432B362110C0CF00C00196 /* CompositeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B352110C0CF00C00196 /* CompositeTextView.swift */; };
+		AE432B382110C8B800C00196 /* CompositeSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B372110C8B800C00196 /* CompositeSegmentedControl.swift */; };
+		AE432B3A2110D8DC00C00196 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B392110D8DC00C00196 /* UserViewController.swift */; };
+		AE432B3C2110D91600C00196 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE432B3B2110D91600C00196 /* User.storyboard */; };
+		AE432B4021116D4500C00196 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B3F21116D4500C00196 /* ProductViewController.swift */; };
+		AE432B4221116D5D00C00196 /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE432B4121116D5D00C00196 /* Product.storyboard */; };
+		AE432B462112DA5400C00196 /* ReviewCompositeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B452112DA5400C00196 /* ReviewCompositeView.swift */; };
+		AE432B4921141A7300C00196 /* ChangeUserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B4821141A7300C00196 /* ChangeUserDataViewController.swift */; };
+		AE432B4B21141E1000C00196 /* ChangeUserData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE432B4A21141E1000C00196 /* ChangeUserData.storyboard */; };
+		AE432B4D21143B8C00C00196 /* ChangeUserDataVCKeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B4C21143B8C00C00196 /* ChangeUserDataVCKeyboardHandler.swift */; };
 		AE4629A220FA259900193626 /* ChangeUserData.json in Resources */ = {isa = PBXBuildFile; fileRef = AC02CC26D0E7C874CE0DBBE0 /* ChangeUserData.json */; };
 		AE4629A320FA25CA00193626 /* Login.json in Resources */ = {isa = PBXBuildFile; fileRef = AEA27C3720FA0B52006BB525 /* Login.json */; };
 		AE4629A420FA25CA00193626 /* Logout.json in Resources */ = {isa = PBXBuildFile; fileRef = AEA27C3920FA1320006BB525 /* Logout.json */; };
@@ -55,12 +65,23 @@
 		AE6ADF712106067E007036EC /* DeleteFromBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = AE6ADF702106067E007036EC /* DeleteFromBasket.json */; };
 		AE6ADF7221061C8A007036EC /* AddToBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = AE6ADF6E210605EA007036EC /* AddToBasket.json */; };
 		AE6ADF7321061C8A007036EC /* DeleteFromBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = AE6ADF702106067E007036EC /* DeleteFromBasket.json */; };
+		AE6ADF75210DC2A3007036EC /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF74210DC2A3007036EC /* AuthViewController.swift */; };
+		AE6ADF77210DC2CA007036EC /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6ADF76210DC2CA007036EC /* Auth.storyboard */; };
+		AE6ADF7A210E13EA007036EC /* AuthVCKeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF79210E13EA007036EC /* AuthVCKeyboardHandler.swift */; };
+		AE6ADF7D210E2421007036EC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF7C210E2421007036EC /* RegisterViewController.swift */; };
+		AE6ADF7F210E255A007036EC /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6ADF7E210E255A007036EC /* Register.storyboard */; };
+		AE6ADF8B210F6A0E007036EC /* CompositeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF8A210F6A0E007036EC /* CompositeTextField.swift */; };
+		AE6ADF8D210F75D7007036EC /* UniversalSetupableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF8C210F75D7007036EC /* UniversalSetupableView.swift */; };
+		AE6ADF8F210FA109007036EC /* RegisterVCKeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF8E210FA109007036EC /* RegisterVCKeyboardHandler.swift */; };
+		AE6ADF91211040B3007036EC /* CatalogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF90211040B3007036EC /* CatalogTableViewController.swift */; };
+		AE6ADF94211040D4007036EC /* Catalog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6ADF93211040D4007036EC /* Catalog.storyboard */; };
+		AE6ADF9621104307007036EC /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6ADF9521104307007036EC /* TabBar.storyboard */; };
 		AEA23FE820F2589800D755B0 /* AbstractRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA23FE720F2589800D755B0 /* AbstractRequestFactory.swift */; };
 		AEA23FEA20F25AEE00D755B0 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA23FE920F25AEE00D755B0 /* RequestRouter.swift */; };
 		AEA23FED20F26A0400D755B0 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA23FEC20F26A0400D755B0 /* LoginResult.swift */; };
 		AEA27C2920F9E0F8006BB525 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA27C2820F9E0F8006BB525 /* UserProfile.swift */; };
 		AEA27C2B20F9E11A006BB525 /* BaseRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA27C2A20F9E11A006BB525 /* BaseRequestFactory.swift */; };
-		AEA27C2D20F9E782006BB525 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA27C2C20F9E782006BB525 /* UserInfo.swift */; };
+		AEA27C2D20F9E782006BB525 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA27C2C20F9E782006BB525 /* UserData.swift */; };
 		AEA27C2F20F9F997006BB525 /* ResponseCodableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA27C2E20F9F997006BB525 /* ResponseCodableTest.swift */; };
 		AEA27C3120FA02E0006BB525 /* RequestFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA27C3020FA02DF006BB525 /* RequestFactoryMock.swift */; };
 		AEA27C3320FA03B3006BB525 /* ErrorParserStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA27C3220FA03B3006BB525 /* ErrorParserStubs.swift */; };
@@ -120,6 +141,16 @@
 		AE41F9B820EB779F002D96E6 /* av.belyaevUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = av.belyaevUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE41F9BC20EB779F002D96E6 /* av_belyaevUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = av_belyaevUITests.swift; sourceTree = "<group>"; };
 		AE41F9BE20EB779F002D96E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE432B352110C0CF00C00196 /* CompositeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeTextView.swift; sourceTree = "<group>"; };
+		AE432B372110C8B800C00196 /* CompositeSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeSegmentedControl.swift; sourceTree = "<group>"; };
+		AE432B392110D8DC00C00196 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		AE432B3B2110D91600C00196 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		AE432B3F21116D4500C00196 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		AE432B4121116D5D00C00196 /* Product.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
+		AE432B452112DA5400C00196 /* ReviewCompositeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCompositeView.swift; sourceTree = "<group>"; };
+		AE432B4821141A7300C00196 /* ChangeUserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataViewController.swift; sourceTree = "<group>"; };
+		AE432B4A21141E1000C00196 /* ChangeUserData.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangeUserData.storyboard; sourceTree = "<group>"; };
+		AE432B4C21143B8C00C00196 /* ChangeUserDataVCKeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataVCKeyboardHandler.swift; sourceTree = "<group>"; };
 		AE4629A720FA2B9C00193626 /* CatalogRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogRequestFactory.swift; sourceTree = "<group>"; };
 		AE4629A920FA2CF700193626 /* Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
 		AE4629AB20FA303400193626 /* ProductSimpleResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSimpleResult.swift; sourceTree = "<group>"; };
@@ -143,12 +174,23 @@
 		AE6ADF6C21060335007036EC /* BasketRequestFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRequestFactoryTests.swift; sourceTree = "<group>"; };
 		AE6ADF6E210605EA007036EC /* AddToBasket.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AddToBasket.json; sourceTree = "<group>"; };
 		AE6ADF702106067E007036EC /* DeleteFromBasket.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DeleteFromBasket.json; sourceTree = "<group>"; };
+		AE6ADF74210DC2A3007036EC /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		AE6ADF76210DC2CA007036EC /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		AE6ADF79210E13EA007036EC /* AuthVCKeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVCKeyboardHandler.swift; sourceTree = "<group>"; };
+		AE6ADF7C210E2421007036EC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		AE6ADF7E210E255A007036EC /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		AE6ADF8A210F6A0E007036EC /* CompositeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeTextField.swift; sourceTree = "<group>"; };
+		AE6ADF8C210F75D7007036EC /* UniversalSetupableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalSetupableView.swift; sourceTree = "<group>"; };
+		AE6ADF8E210FA109007036EC /* RegisterVCKeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVCKeyboardHandler.swift; sourceTree = "<group>"; };
+		AE6ADF90211040B3007036EC /* CatalogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableViewController.swift; sourceTree = "<group>"; };
+		AE6ADF93211040D4007036EC /* Catalog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Catalog.storyboard; sourceTree = "<group>"; };
+		AE6ADF9521104307007036EC /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		AEA23FE720F2589800D755B0 /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequestFactory.swift; sourceTree = "<group>"; };
 		AEA23FE920F25AEE00D755B0 /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
 		AEA23FEC20F26A0400D755B0 /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
 		AEA27C2820F9E0F8006BB525 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		AEA27C2A20F9E11A006BB525 /* BaseRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequestFactory.swift; sourceTree = "<group>"; };
-		AEA27C2C20F9E782006BB525 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		AEA27C2C20F9E782006BB525 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		AEA27C2E20F9F997006BB525 /* ResponseCodableTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodableTest.swift; sourceTree = "<group>"; };
 		AEA27C3020FA02DF006BB525 /* RequestFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactoryMock.swift; sourceTree = "<group>"; };
 		AEA27C3220FA03B3006BB525 /* ErrorParserStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParserStubs.swift; sourceTree = "<group>"; };
@@ -338,8 +380,56 @@
 		AE41F9CF20EB9462002D96E6 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				AE6ADF9521104307007036EC /* TabBar.storyboard */,
+				AE432B3E21116CE400C00196 /* Views */,
+				AE432B4721141A4700C00196 /* UserData */,
+				AE6ADF7B210E2408007036EC /* Register */,
+				AE6ADF78210DC2D2007036EC /* Auth */,
+				AE6ADF92211040BB007036EC /* Catalog */,
+				AE432B3D2110D91B00C00196 /* User */,
+				AE432B4421116E1800C00196 /* Product */,
 			);
 			path = Flows;
+			sourceTree = "<group>";
+		};
+		AE432B3D2110D91B00C00196 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				AE432B392110D8DC00C00196 /* UserViewController.swift */,
+				AE432B3B2110D91600C00196 /* User.storyboard */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		AE432B3E21116CE400C00196 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE6ADF8C210F75D7007036EC /* UniversalSetupableView.swift */,
+				AE432B372110C8B800C00196 /* CompositeSegmentedControl.swift */,
+				AE432B352110C0CF00C00196 /* CompositeTextView.swift */,
+				AE6ADF8A210F6A0E007036EC /* CompositeTextField.swift */,
+				AE432B452112DA5400C00196 /* ReviewCompositeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AE432B4421116E1800C00196 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				AE432B3F21116D4500C00196 /* ProductViewController.swift */,
+				AE432B4121116D5D00C00196 /* Product.storyboard */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		AE432B4721141A4700C00196 /* UserData */ = {
+			isa = PBXGroup;
+			children = (
+				AE432B4821141A7300C00196 /* ChangeUserDataViewController.swift */,
+				AE432B4C21143B8C00C00196 /* ChangeUserDataVCKeyboardHandler.swift */,
+				AE432B4A21141E1000C00196 /* ChangeUserData.storyboard */,
+			);
+			path = UserData;
 			sourceTree = "<group>";
 		};
 		AE4629A120FA232000193626 /* Stubs */ = {
@@ -359,6 +449,35 @@
 			path = Stubs;
 			sourceTree = "<group>";
 		};
+		AE6ADF78210DC2D2007036EC /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				AE6ADF74210DC2A3007036EC /* AuthViewController.swift */,
+				AE6ADF79210E13EA007036EC /* AuthVCKeyboardHandler.swift */,
+				AE6ADF76210DC2CA007036EC /* Auth.storyboard */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		AE6ADF7B210E2408007036EC /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				AE6ADF7C210E2421007036EC /* RegisterViewController.swift */,
+				AE6ADF7E210E255A007036EC /* Register.storyboard */,
+				AE6ADF8E210FA109007036EC /* RegisterVCKeyboardHandler.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		AE6ADF92211040BB007036EC /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				AE6ADF90211040B3007036EC /* CatalogTableViewController.swift */,
+				AE6ADF93211040D4007036EC /* Catalog.storyboard */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
 		AEA23FEB20F269F600D755B0 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,7 +485,7 @@
 				AEB394D920F3AADA00245DAA /* RegistrationResult.swift */,
 				AEB394DF20F3B35C00245DAA /* ChangeUserDataResult.swift */,
 				AEB394E320F3BEEA00245DAA /* LogoutResult.swift */,
-				AEA27C2C20F9E782006BB525 /* UserInfo.swift */,
+				AEA27C2C20F9E782006BB525 /* UserData.swift */,
 				AE4629AB20FA303400193626 /* ProductSimpleResult.swift */,
 				AE4629AD20FA320100193626 /* ProductFullResult.swift */,
 				AE6ADF4F20FBC461007036EC /* ReviewResult.swift */,
@@ -430,8 +549,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE41F9C120EB779F002D96E6 /* Build configuration list for PBXNativeTarget "av.belyaev" */;
 			buildPhases = (
-				AE6ADF6120FCFC7E007036EC /* ShellScript */,
 				354D3E18420A950316C0D2E3 /* [CP] Check Pods Manifest.lock */,
+				AE6ADF6120FCFC7E007036EC /* ShellScript */,
 				AE41F99520EB779F002D96E6 /* Sources */,
 				AE41F99620EB779F002D96E6 /* Frameworks */,
 				AE41F99720EB779F002D96E6 /* Resources */,
@@ -543,12 +662,19 @@
 				AE6ADF7221061C8A007036EC /* AddToBasket.json in Resources */,
 				AE6ADF7321061C8A007036EC /* DeleteFromBasket.json in Resources */,
 				AE6ADF5F20FCF933007036EC /* AddReview.json in Resources */,
+				AE432B3C2110D91600C00196 /* User.storyboard in Resources */,
 				AE6ADF6020FCF933007036EC /* DeleteReview.json in Resources */,
+				AE6ADF9621104307007036EC /* TabBar.storyboard in Resources */,
 				AE4629B720FA450F00193626 /* Catalog.json in Resources */,
 				AE4629B820FA450F00193626 /* Product.json in Resources */,
+				AE6ADF94211040D4007036EC /* Catalog.storyboard in Resources */,
+				AE432B4B21141E1000C00196 /* ChangeUserData.storyboard in Resources */,
 				AE4629A320FA25CA00193626 /* Login.json in Resources */,
+				AE432B4221116D5D00C00196 /* Product.storyboard in Resources */,
 				AE4629A420FA25CA00193626 /* Logout.json in Resources */,
 				AE4629A520FA25CA00193626 /* Register.json in Resources */,
+				AE6ADF7F210E255A007036EC /* Register.storyboard in Resources */,
+				AE6ADF77210DC2CA007036EC /* Auth.storyboard in Resources */,
 				AE4629A620FA25CA00193626 /* ChangeUserData.json in Resources */,
 				AE41F9A720EB779F002D96E6 /* LaunchScreen.storyboard in Resources */,
 				AE41F9A420EB779F002D96E6 /* Assets.xcassets in Resources */,
@@ -705,11 +831,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-av.belyaev/Pods-av.belyaev-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -752,25 +880,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE4629AC20FA303400193626 /* ProductSimpleResult.swift in Sources */,
+				AE6ADF8F210FA109007036EC /* RegisterVCKeyboardHandler.swift in Sources */,
+				AE432B3A2110D8DC00C00196 /* UserViewController.swift in Sources */,
 				AE4629AE20FA320100193626 /* ProductFullResult.swift in Sources */,
 				AEB394E020F3B35C00245DAA /* ChangeUserDataResult.swift in Sources */,
 				AEA23FE820F2589800D755B0 /* AbstractRequestFactory.swift in Sources */,
+				AE6ADF75210DC2A3007036EC /* AuthViewController.swift in Sources */,
 				AE4629A820FA2B9C00193626 /* CatalogRequestFactory.swift in Sources */,
 				AE41F99D20EB779F002D96E6 /* AppDelegate.swift in Sources */,
 				AEB394E420F3BEEA00245DAA /* LogoutResult.swift in Sources */,
 				AE6ADF5820FCF531007036EC /* DeleteReviewResult.swift in Sources */,
+				AE432B382110C8B800C00196 /* CompositeSegmentedControl.swift in Sources */,
 				AE6ADF5220FBC65E007036EC /* ReviewRequestFactory.swift in Sources */,
 				AE6ADF692105CD85007036EC /* Basket.swift in Sources */,
+				AE6ADF7A210E13EA007036EC /* AuthVCKeyboardHandler.swift in Sources */,
 				AEA23FEA20F25AEE00D755B0 /* RequestRouter.swift in Sources */,
-				AEA27C2D20F9E782006BB525 /* UserInfo.swift in Sources */,
+				AE6ADF7D210E2421007036EC /* RegisterViewController.swift in Sources */,
+				AEA27C2D20F9E782006BB525 /* UserData.swift in Sources */,
 				AE6ADF632105C2D0007036EC /* AddingProductBasketResult.swift in Sources */,
+				AE432B4921141A7300C00196 /* ChangeUserDataViewController.swift in Sources */,
+				AE6ADF8D210F75D7007036EC /* UniversalSetupableView.swift in Sources */,
 				AE214ADC20F2526D003F960D /* ResponceCodable.swift in Sources */,
 				AE214ADA20F24FB3003F960D /* ErrorParser.swift in Sources */,
+				AE432B362110C0CF00C00196 /* CompositeTextView.swift in Sources */,
+				AE432B4D21143B8C00C00196 /* ChangeUserDataVCKeyboardHandler.swift in Sources */,
 				AEA27C2B20F9E11A006BB525 /* BaseRequestFactory.swift in Sources */,
+				AE432B4021116D4500C00196 /* ProductViewController.swift in Sources */,
 				AE214AD820F24EFE003F960D /* AbstractErrorParser.swift in Sources */,
+				AE432B462112DA5400C00196 /* ReviewCompositeView.swift in Sources */,
 				AEB394D520F2740100245DAA /* RequestFactory.swift in Sources */,
 				AEB394DA20F3AADA00245DAA /* RegistrationResult.swift in Sources */,
+				AE6ADF8B210F6A0E007036EC /* CompositeTextField.swift in Sources */,
 				AE4629AA20FA2CF700193626 /* Catalog.swift in Sources */,
+				AE6ADF91211040B3007036EC /* CatalogTableViewController.swift in Sources */,
 				AE6ADF652105C765007036EC /* DeleteProductBasketResult.swift in Sources */,
 				AE6ADF5420FBC7A6007036EC /* Reviews.swift in Sources */,
 				AEB394D020F26BC100245DAA /* AuthRequestFactory.swift in Sources */,

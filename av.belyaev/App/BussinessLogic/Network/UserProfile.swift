@@ -28,7 +28,6 @@ extension UserProfile {
                 "gender": userData.gender,
                 "credit_card": userData.creditCard,
                 "bio": userData.bio
-                
             ]
         }
     }
