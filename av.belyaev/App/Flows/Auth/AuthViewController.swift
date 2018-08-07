@@ -9,6 +9,7 @@ class AuthViewController: UIViewController {
     
     let requestFactoryUserAuth: AuthRequestFactory
         = RequestFactory().makeAuthRequestFactory()
+    let authUserDefaultsFactory = UserDefaultsFactory().makeAuthFactory()
 
     @IBOutlet weak var login: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -19,7 +20,7 @@ class AuthViewController: UIViewController {
     }
     
     @IBAction func cancelButtonDidTap(_ sender: UIBarButtonItem) {
-        UserDefaults.standard.set(false, forKey: "cancelButton")
+        authUserDefaultsFactory.pressCancelButton(flag: false)
         performSegue(withIdentifier: "unwindToUserData", sender: self)
     }
     
@@ -38,30 +39,29 @@ class AuthViewController: UIViewController {
         else {
             return
         }
-        requestFactoryUserAuth.login(
-            userName: username,
-            password: password
-        ) { response in
-            switch response.result {
-            case .success(let login):
-                if login.result == 1 {
-                    self.saveInUserDefaults(login: login)
-                    self.performSegue(withIdentifier: "unwindToUserData", sender: self)
+        if username == "test" && password == "test" {
+            requestFactoryUserAuth.login(
+                userName: username,
+                password: password
+            ) { response in
+                switch response.result {
+                case .success(let login):
+                    if login.result == 1 {
+                        self.authUserDefaultsFactory.saveDataAfterLogin(login: login)
+                        DispatchQueue.main.async {
+                            self.performSegue(withIdentifier: "unwindToUserData", sender: self)
+                        }
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
                 }
-            case .failure(let error):
-                print(error.localizedDescription)
             }
+        } else {
+            AlertControllerFactory.callAlertOK(
+                title: "Авторизация",
+                message: "Неверный логин или пароль",
+                controller: self) { _ in }
         }
+        
     }
-    
-    func saveInUserDefaults(login: LoginResult) {
-        let userDefaults = UserDefaults.standard
-        userDefaults.set(true, forKey: "isAuth")
-        userDefaults.set(login.user.firstName, forKey: "firstName")
-        userDefaults.set(login.user.lastName, forKey: "lastName")
-        userDefaults.set(login.user.userID, forKey: "userID")
-        userDefaults.set(login.user.login, forKey: "userName")
-    }
-    
-    
 }

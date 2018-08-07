@@ -10,6 +10,7 @@ class ProductViewController: UIViewController {
         = RequestFactory().makeCatalogRequestFactory()
     let reviewRequestFactory: ReviewRequestFactory
         = RequestFactory().makeReviewsRequestFactory()
+    let basket = BasketLogic.sharedInstance
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageProduct: UIImageView!
@@ -17,6 +18,19 @@ class ProductViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UITextView!
     @IBOutlet weak var reviewStackView: UIStackView!
     @IBOutlet weak var reviewTitleLabel: UILabel!
+    
+    @IBAction func addToBasketButtonDidTap(_ sender: UIButton) {
+        if let product = self.product {
+            basket.products.append(product)
+            if let tabController = self.tabBarController,
+                let tabItems = tabController.tabBar.items {
+                tabItems[1].badgeValue = String(basket.products.count)
+                tabItems[1].isEnabled = true
+            }
+        }
+    }
+    
+    var product: ProductFullResult?
     
     var productID: Int? {
         didSet {
@@ -32,6 +46,7 @@ class ProductViewController: UIViewController {
         catalogRequestFactory.getProduct(productID: productID) { response in
             switch response.result {
             case .success(let product):
+                self.product = product
                 DispatchQueue.main.async {
                     self.nameLabel.text = product.name
                     self.priceProduct.text = String(product.price)

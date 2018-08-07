@@ -64,6 +64,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbm-nx-DNJ">
                                         <rect key="frame" x="148.5" y="40" width="46" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" label="logoutButton"/>
                                         <state key="normal" title="Выйти"/>
                                         <connections>
                                             <action selector="exitButtoDidTab:" destination="sDL-0Q-Xom" eventType="touchUpInside" id="4rH-pp-cIO"/>

@@ -37,19 +37,18 @@ class CatalogTableViewController: UITableViewController {
         return products.count
     }
 
-    
     override func tableView(
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
         ) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: AppConstants().productCell, for: indexPath)
             cell.detailTextLabel?.text = String(products[indexPath.row].price)
             cell.textLabel?.text = products[indexPath.row].name
             return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "productSegue" {
+        if segue.identifier == AppConstants().productSegue {
             let productVC = segue.destination as? ProductViewController
             guard let changedRow = tableView.indexPathForSelectedRow?.row
                 else {

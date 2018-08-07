@@ -29,6 +29,7 @@
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b7v-Q2-koJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
+                                                        <accessibility key="accessibilityConfiguration" label="login"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="200" id="wrL-ID-qE9"/>
                                                         </constraints>
@@ -38,6 +39,7 @@
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ioh-CZ-QXU">
                                                         <rect key="frame" x="0.0" y="40" width="200" height="30"/>
+                                                        <accessibility key="accessibilityConfiguration" label="password"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
@@ -52,6 +54,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nir-Ci-a75">
                                                         <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
+                                                        <accessibility key="accessibilityConfiguration" label="go"/>
                                                         <state key="normal" title="Вход"/>
                                                         <connections>
                                                             <action selector="loginButtonDidTouch:" destination="2eO-Sq-tz8" eventType="touchUpInside" id="swJ-Rr-O6Z"/>
@@ -59,6 +62,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TU4-VN-1Vo">
                                                         <rect key="frame" x="0.0" y="40" width="200" height="30"/>
+                                                        <accessibility key="accessibilityConfiguration" label="registeringButton"/>
                                                         <state key="normal" title="Регистрация"/>
                                                         <connections>
                                                             <segue destination="sYC-Nl-ypn" kind="show" id="MdZ-gF-dvE"/>

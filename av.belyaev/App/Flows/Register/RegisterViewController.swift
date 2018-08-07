@@ -15,7 +15,9 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordView: CompositeTextField!
     @IBOutlet weak var confirmPasswordVoew: CompositeTextField!
     
-    let registerRequestFactory: AuthRequestFactory = RequestFactory().makeAuthRequestFactory()
+    let registerRequestFactory: AuthRequestFactory
+        = RequestFactory().makeAuthRequestFactory()
+    let authUserDefaultsFactory = UserDefaultsFactory().makeAuthFactory()
     
     override func viewDidAppear(_ animated: Bool) {
         subscribeOnKeyboardNotification()
@@ -47,18 +49,15 @@ class RegisterViewController: UIViewController {
             switch response.result {
             case .success(let value):
                 if value.result == 1 {
-                    self.saveInUserDefaults()
-                    self.performSegue(withIdentifier: "unwindToUserData", sender: self)
+                    self.authUserDefaultsFactory.saveDataAfterRegister(userData: self.userData)
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: AppConstants().unwindToUserData, sender: self)
+                    }
+                    
                 }
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
-    }
-    
-    func saveInUserDefaults() {
-        let userDefaults = UserDefaults.standard
-        userDefaults.set(true, forKey: "isAuth")
-        userDefaults.set(userData.userName, forKey: "firstName")
     }
 }

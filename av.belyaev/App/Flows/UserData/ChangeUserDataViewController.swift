@@ -40,7 +40,7 @@ class ChangeUserDataViewController: UIViewController {
     }
     
     @IBAction func cancelButtonDidTap(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "unwindToUserData", sender: self)
+        performSegue(withIdentifier: AppConstants().unwindToUserData, sender: self)
     }
     
     func changeUser() {
@@ -51,7 +51,7 @@ class ChangeUserDataViewController: UIViewController {
             case .success(let changeData):
                 // При успешном изменении данных возвращаемся на экран с данными пользователя
                 if changeData.result == 1 {
-                    self.performSegue(withIdentifier: "unwindToUserData", sender: self)
+                    self.performSegue(withIdentifier: AppConstants().unwindToUserData, sender: self)
                 }
             case .failure(let error):
                 print(error.localizedDescription)

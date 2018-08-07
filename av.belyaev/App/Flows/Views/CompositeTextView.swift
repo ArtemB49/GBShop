@@ -80,6 +80,13 @@ final class CompositeTextView: UniversalSetupableView {
             inputTextView.text = newValue
         }
     }
+    
+    @IBInspectable
+    var accessibility: String = " " {
+        didSet {
+            inputTextView.accessibilityLabel = accessibility
+        }
+    }
 
     override func configure() {
         dataContainerView.addArrangedSubview(titleImageView)

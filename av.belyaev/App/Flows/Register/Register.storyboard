@@ -32,6 +32,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="contentType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibility" value="nameField"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEk-pY-FAT" customClass="CompositeTextField" customModule="av_belyaev" customModuleProvider="target">
@@ -42,6 +43,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="contentType">
                                                         <integer key="value" value="3"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibility" value="emailField"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDG-Q3-u5m" customClass="CompositeTextField" customModule="av_belyaev" customModuleProvider="target">
@@ -52,6 +54,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="contentType">
                                                         <integer key="value" value="2"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibility" value="cardField"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7F3-MK-xhR" customClass="CompositeTextView" customModule="av_belyaev" customModuleProvider="target">
@@ -62,6 +65,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="contentType">
                                                         <integer key="value" value="2"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibility" value="aboutField"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qpH-3G-rSv" customClass="CompositeSegmentedControl" customModule="av_belyaev" customModuleProvider="target">
@@ -80,6 +84,7 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="titleImage" value="key"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Пароль"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibility" value="passwordField"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YdY-xK-9Oc" customClass="CompositeTextField" customModule="av_belyaev" customModuleProvider="target">
@@ -90,10 +95,12 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="contentType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibility" value="confirmPasswordField"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DB0-MI-g3Y">
                                                 <rect key="frame" x="0.0" y="700" width="375" height="100"/>
+                                                <accessibility key="accessibilityConfiguration" label="registerButton"/>
                                                 <state key="normal" title="Зарегистрироваться"/>
                                                 <connections>
                                                     <action selector="registerButtonDidTap:" destination="X0U-yr-ZTo" eventType="touchUpInside" id="WOT-P4-BKG"/>

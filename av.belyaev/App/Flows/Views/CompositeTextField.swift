@@ -78,6 +78,14 @@ final class CompositeTextField: UniversalSetupableView {
             inputTextField.text = newValue
         }
     }
+    
+    @IBInspectable
+    var accessibility: String = " " {
+        didSet {
+            inputTextField.accessibilityLabel = accessibility
+        }
+    }
+    
     enum ContentType: Int {
         case userName
         case password
