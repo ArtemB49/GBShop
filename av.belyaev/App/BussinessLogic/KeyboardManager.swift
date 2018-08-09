@@ -1,11 +1,17 @@
 /**
- * Расширение BasketViewController для работы с экранной клавиатурой
+ * Класс для работы с экранной клавматурой
  */
-
 
 import UIKit
 
-extension BasketViewController {
+class KeyboardManager {
+    
+    init(scrollView: UIScrollView) {
+        self.scrollView = scrollView
+        hideKeyboardGesture()
+    }
+    
+    let scrollView: UIScrollView
     
     func subscribeOnKeyboardNotification() {
         NotificationCenter.default.addObserver(
@@ -41,7 +47,7 @@ extension BasketViewController {
             let contentInsets = UIEdgeInsets(
                 top: 0.0,
                 left: 0.0,
-                bottom: keyboardSize.height,
+                bottom: keyboardSize.height + 10,
                 right: 0.0
             )
             scrollView.contentInset = contentInsets
@@ -55,11 +61,17 @@ extension BasketViewController {
         scrollView.scrollIndicatorInsets = contentInsets
     }
     
-    @objc fileprivate func hideKeyboard() {
+    @objc func hideKeyboard() {
         scrollView.endEditing(true)
     }
     
     func hideKeyboardGesture() {
-        scrollView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard)))
+        scrollView
+            .addGestureRecognizer(
+                UITapGestureRecognizer(
+                    target: self,
+                    action: #selector(self.hideKeyboard)
+            )
+        )
     }
 }

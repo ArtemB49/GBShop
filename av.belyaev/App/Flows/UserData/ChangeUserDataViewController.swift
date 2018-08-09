@@ -19,19 +19,21 @@ class ChangeUserDataViewController: UIViewController {
 
     var userData: UserData?
     
+    var keyboardManager: KeyboardManager?
+    
     override func viewDidAppear(_ animated: Bool) {
         // Подписка на уведомления клавиатура
-        subscribeOnKeyboardNotification()
-        hideKeyboardGesture()
+        keyboardManager?.subscribeOnKeyboardNotification()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         // ОТписка от уведомлений клавиатуры
-        unsubscribeOnKeyboardNotification()
+        keyboardManager?.unsubscribeOnKeyboardNotification()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        keyboardManager = KeyboardManager(scrollView: self.scrollView)
         userNameField.text = userData?.userName ?? ""
     }
 
@@ -40,7 +42,10 @@ class ChangeUserDataViewController: UIViewController {
     }
     
     @IBAction func cancelButtonDidTap(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: AppConstants().unwindToUserData, sender: self)
+        performSegue(
+            withIdentifier: ChangeUserDataVCConstants.unwindToUserData.rawValue,
+            sender: self
+        )
     }
     
     func changeUser() {
@@ -51,7 +56,10 @@ class ChangeUserDataViewController: UIViewController {
             case .success(let changeData):
                 // При успешном изменении данных возвращаемся на экран с данными пользователя
                 if changeData.result == 1 {
-                    self.performSegue(withIdentifier: AppConstants().unwindToUserData, sender: self)
+                    self.performSegue(
+                        withIdentifier: ChangeUserDataVCConstants.unwindToUserData.rawValue,
+                        sender: self
+                    )
                 }
             case .failure(let error):
                 print(error.localizedDescription)

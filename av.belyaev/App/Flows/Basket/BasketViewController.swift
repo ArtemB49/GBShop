@@ -4,10 +4,17 @@
 
 import UIKit
 
-class BasketViewController: UIViewController {
+class BasketViewController: UIViewController, TrackableMixin {
     
     var pickerOption = ["Наличные", "Банковская карта", "Кредит"]
     let basketLogic = BasketLogic.sharedInstance
+    var keyboardManager: KeyboardManager?
+    
+    lazy var pickerView: UIPickerView = {
+        let view = UIPickerView()
+        view.delegate = self
+        return view
+    }()
 
     @IBOutlet weak var paymentField: UITextField!
     @IBOutlet weak var productStackView: UIStackView!
@@ -15,19 +22,19 @@ class BasketViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let pickerView = UIPickerView()
-        pickerView.delegate = self
         paymentField.inputView = pickerView
+        keyboardManager = KeyboardManager(scrollView: scrollView)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        subscribeOnKeyboardNotification()
-        hideKeyboardGesture()
+        keyboardManager?.subscribeOnKeyboardNotification()
+        
         createBasketView()
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        unsubscribeOnKeyboardNotification()
+        keyboardManager?.unsubscribeOnKeyboardNotification()
         self.productStackView.safelyRemoveArrangedSubviews()
     }
     
@@ -56,8 +63,8 @@ class BasketViewController: UIViewController {
 
     @IBAction func orderButtonDidTap(_ sender: UIButton) {
         AlertControllerFactory.callAlertOK(
-            title: "Заказ №000322",
-            message: "Заказ успешно принят, ожидайте звонка специалиста",
+            title: BasketVCConstants.titleAlertOrder.rawValue,
+            message: BasketVCConstants.messageAlertOrder.rawValue,
             controller: self
         ) { _ in
             self.tabBarController?.selectedIndex = 0
@@ -68,7 +75,7 @@ class BasketViewController: UIViewController {
                 tabItems[1].isEnabled = false
             }
         }
-        
+        track(AnalyticsEvent.paymentOrder(numberOrder: "000322"))
         
     }
     

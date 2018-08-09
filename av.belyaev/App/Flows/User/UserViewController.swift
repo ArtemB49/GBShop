@@ -3,8 +3,9 @@
  */
 
 import UIKit
+import Crashlytics
 
-class UserViewController: UIViewController {
+class UserViewController: UIViewController, TrackableMixin {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var firstNameLabel: UILabel!
@@ -20,18 +21,19 @@ class UserViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let isCancelDidntTap = userDefaults.bool(forKey: "cancelButton")
-        if isCancelDidntTap {
-            let isAuth = userDefaults.bool(forKey: "isAuth")
-            if isAuth {
-                titleLabel.text = "Ваши данные"
-                firstNameLabel.text = userDefaults.string(forKey: "firstName")
-                lastNameLabel.text = userDefaults.string(forKey: "lastName")
+        if authUserDefaultsFactory.isCancelButtonNotTap() {
+            if authUserDefaultsFactory.isAuth() {
+                titleLabel.text = UserVCConstants.titleData.rawValue
+                firstNameLabel.text = authUserDefaultsFactory.firstName
+                lastNameLabel.text = authUserDefaultsFactory.lastName
             } else {
-                titleLabel.text = "Требуется вход"
-                firstNameLabel.text = ""
-                lastNameLabel.text = ""
-                performSegue(withIdentifier: AppConstants().authSegue, sender: self)
+                titleLabel.text = UserVCConstants.titleNeedEnter.rawValue
+                firstNameLabel.text = nil
+                lastNameLabel.text = nil
+                performSegue(
+                    withIdentifier: UserVCConstants.authSegue.rawValue,
+                    sender: self
+                )
             }
         } else {
             authUserDefaultsFactory.pressCancelButton(flag: true)
@@ -50,7 +52,11 @@ class UserViewController: UIViewController {
             case .success(let logout):
                 if logout.result == 1 {
                     self.authUserDefaultsFactory.cleanUserData()
-                    self.performSegue(withIdentifier: AppConstants().authSegue, sender: self)
+                    self.performSegue(
+                        withIdentifier: UserVCConstants.authSegue.rawValue,
+                        sender: self
+                    )
+                    self.track(AnalyticsEvent.logout)
                 }
             case .failure(let error):
                 print(error.localizedDescription)
@@ -60,12 +66,12 @@ class UserViewController: UIViewController {
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let identifier = segue.identifier
-        if identifier == AppConstants().changeUserSegue {
+        if identifier == UserVCConstants.changeUserSegue.rawValue {
             let navVC = segue.destination as? UINavigationController
             let changeUserVC = navVC?.viewControllers[0] as? ChangeUserDataViewController
             changeUserVC?.userData = UserData(
-                userID: userDefaults.integer(forKey: "userID"),
-                userName: userDefaults.string(forKey: "userName") ?? "",
+                userID: authUserDefaultsFactory.userID ?? 1,
+                userName: authUserDefaultsFactory.userName ?? "",
                 password: "",
                 email: "",
                 gender: "",

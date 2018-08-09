@@ -4,7 +4,7 @@
 
 import UIKit
 
-class CatalogTableViewController: UITableViewController {
+class CatalogTableViewController: UITableViewController, TrackableMixin {
     
     let catalogService: CatalogRequestFactory = RequestFactory().makeCatalogRequestFactory()
     var products: [ProductSimpleResult] = [] {
@@ -18,6 +18,7 @@ class CatalogTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateCatalog()
+        track(AnalyticsEvent.showCatalog)
     }
     
     func updateCatalog() {
@@ -41,14 +42,17 @@ class CatalogTableViewController: UITableViewController {
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
         ) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: AppConstants().productCell, for: indexPath)
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: CatalogVCConstants.productCell.rawValue,
+                for: indexPath
+            )
             cell.detailTextLabel?.text = String(products[indexPath.row].price)
             cell.textLabel?.text = products[indexPath.row].name
             return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == AppConstants().productSegue {
+        if segue.identifier == CatalogVCConstants.productSegue.rawValue {
             let productVC = segue.destination as? ProductViewController
             guard let changedRow = tableView.indexPathForSelectedRow?.row
                 else {

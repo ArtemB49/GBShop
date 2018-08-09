@@ -30,19 +30,27 @@
 		AE432B462112DA5400C00196 /* ReviewCompositeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B452112DA5400C00196 /* ReviewCompositeView.swift */; };
 		AE432B4921141A7300C00196 /* ChangeUserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B4821141A7300C00196 /* ChangeUserDataViewController.swift */; };
 		AE432B4B21141E1000C00196 /* ChangeUserData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE432B4A21141E1000C00196 /* ChangeUserData.storyboard */; };
-		AE432B4D21143B8C00C00196 /* ChangeUserDataVCKeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B4C21143B8C00C00196 /* ChangeUserDataVCKeyboardHandler.swift */; };
 		AE432B4F21183F3900C00196 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B4E21183F3900C00196 /* BasketViewController.swift */; };
 		AE432B5121183F4E00C00196 /* Basket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE432B5021183F4E00C00196 /* Basket.storyboard */; };
 		AE432B55211856E500C00196 /* AlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B54211856E500C00196 /* AlertControllerFactory.swift */; };
 		AE432B572118612F00C00196 /* BasketLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B562118612F00C00196 /* BasketLogic.swift */; };
-		AE432B59211862FB00C00196 /* BasketVCKeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B58211862FB00C00196 /* BasketVCKeyboardHandler.swift */; };
 		AE432B5B211863BA00C00196 /* BasketItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B5A211863BA00C00196 /* BasketItemView.swift */; };
 		AE432B5D2118AECB00C00196 /* StackViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B5C2118AECB00C00196 /* StackViewExtention.swift */; };
 		AE432B5F2118B44100C00196 /* BasketVCPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B5E2118B44100C00196 /* BasketVCPickerView.swift */; };
 		AE432B622119AB4800C00196 /* UserDefaultsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B612119AB4800C00196 /* UserDefaultsFactory.swift */; };
-		AE432B642119AF0400C00196 /* AuthUserDefaultsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B632119AF0400C00196 /* AuthUserDefaultsFactory.swift */; };
+		AE432B642119AF0400C00196 /* AuthUDFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B632119AF0400C00196 /* AuthUDFactory.swift */; };
 		AE432B662119AF8E00C00196 /* KeyUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B652119AF8E00C00196 /* KeyUserDefaults.swift */; };
-		AE432B692119BDFF00C00196 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B682119BDFF00C00196 /* AppConstants.swift */; };
+		AE432B6B211AFBB300C00196 /* TrackableMixin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B6A211AFBB300C00196 /* TrackableMixin.swift */; };
+		AE432B6E211B183E00C00196 /* AuthVCConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B6D211B183E00C00196 /* AuthVCConstant.swift */; };
+		AE432B70211B1A0E00C00196 /* UserVCConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B6F211B1A0E00C00196 /* UserVCConstants.swift */; };
+		AE432B72211B1BE300C00196 /* CatalogVCConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B71211B1BE300C00196 /* CatalogVCConstant.swift */; };
+		AE432B74211B1CB800C00196 /* RegisterVCConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B73211B1CB800C00196 /* RegisterVCConstant.swift */; };
+		AE432B76211B1D5600C00196 /* ChangeUserDataVCConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B75211B1D5600C00196 /* ChangeUserDataVCConstants.swift */; };
+		AE432B78211B206F00C00196 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B77211B206F00C00196 /* KeyboardManager.swift */; };
+		AE432B7A211C1E1400C00196 /* BasketFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B79211C1E1400C00196 /* BasketFactory.swift */; };
+		AE432B7C211C24CD00C00196 /* ProductBasketFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B7B211C24CD00C00196 /* ProductBasketFactory.swift */; };
+		AE432B7E211C475400C00196 /* ProductVCConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B7D211C475400C00196 /* ProductVCConstants.swift */; };
+		AE432B80211C4AB500C00196 /* BasketVCConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE432B7F211C4AB500C00196 /* BasketVCConstants.swift */; };
 		AE4629A220FA259900193626 /* ChangeUserData.json in Resources */ = {isa = PBXBuildFile; fileRef = AC02CC26D0E7C874CE0DBBE0 /* ChangeUserData.json */; };
 		AE4629A320FA25CA00193626 /* Login.json in Resources */ = {isa = PBXBuildFile; fileRef = AEA27C3720FA0B52006BB525 /* Login.json */; };
 		AE4629A420FA25CA00193626 /* Logout.json in Resources */ = {isa = PBXBuildFile; fileRef = AEA27C3920FA1320006BB525 /* Logout.json */; };
@@ -79,12 +87,10 @@
 		AE6ADF7321061C8A007036EC /* DeleteFromBasket.json in Resources */ = {isa = PBXBuildFile; fileRef = AE6ADF702106067E007036EC /* DeleteFromBasket.json */; };
 		AE6ADF75210DC2A3007036EC /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF74210DC2A3007036EC /* AuthViewController.swift */; };
 		AE6ADF77210DC2CA007036EC /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6ADF76210DC2CA007036EC /* Auth.storyboard */; };
-		AE6ADF7A210E13EA007036EC /* AuthVCKeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF79210E13EA007036EC /* AuthVCKeyboardHandler.swift */; };
 		AE6ADF7D210E2421007036EC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF7C210E2421007036EC /* RegisterViewController.swift */; };
 		AE6ADF7F210E255A007036EC /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6ADF7E210E255A007036EC /* Register.storyboard */; };
 		AE6ADF8B210F6A0E007036EC /* CompositeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF8A210F6A0E007036EC /* CompositeTextField.swift */; };
 		AE6ADF8D210F75D7007036EC /* UniversalSetupableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF8C210F75D7007036EC /* UniversalSetupableView.swift */; };
-		AE6ADF8F210FA109007036EC /* RegisterVCKeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF8E210FA109007036EC /* RegisterVCKeyboardHandler.swift */; };
 		AE6ADF91211040B3007036EC /* CatalogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6ADF90211040B3007036EC /* CatalogTableViewController.swift */; };
 		AE6ADF94211040D4007036EC /* Catalog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6ADF93211040D4007036EC /* Catalog.storyboard */; };
 		AE6ADF9621104307007036EC /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6ADF9521104307007036EC /* TabBar.storyboard */; };
@@ -162,19 +168,27 @@
 		AE432B452112DA5400C00196 /* ReviewCompositeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCompositeView.swift; sourceTree = "<group>"; };
 		AE432B4821141A7300C00196 /* ChangeUserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataViewController.swift; sourceTree = "<group>"; };
 		AE432B4A21141E1000C00196 /* ChangeUserData.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangeUserData.storyboard; sourceTree = "<group>"; };
-		AE432B4C21143B8C00C00196 /* ChangeUserDataVCKeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataVCKeyboardHandler.swift; sourceTree = "<group>"; };
 		AE432B4E21183F3900C00196 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
 		AE432B5021183F4E00C00196 /* Basket.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Basket.storyboard; sourceTree = "<group>"; };
 		AE432B54211856E500C00196 /* AlertControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerFactory.swift; sourceTree = "<group>"; };
 		AE432B562118612F00C00196 /* BasketLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketLogic.swift; sourceTree = "<group>"; };
-		AE432B58211862FB00C00196 /* BasketVCKeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketVCKeyboardHandler.swift; sourceTree = "<group>"; };
 		AE432B5A211863BA00C00196 /* BasketItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketItemView.swift; sourceTree = "<group>"; };
 		AE432B5C2118AECB00C00196 /* StackViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewExtention.swift; sourceTree = "<group>"; };
 		AE432B5E2118B44100C00196 /* BasketVCPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketVCPickerView.swift; sourceTree = "<group>"; };
 		AE432B612119AB4800C00196 /* UserDefaultsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsFactory.swift; sourceTree = "<group>"; };
-		AE432B632119AF0400C00196 /* AuthUserDefaultsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserDefaultsFactory.swift; sourceTree = "<group>"; };
+		AE432B632119AF0400C00196 /* AuthUDFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUDFactory.swift; sourceTree = "<group>"; };
 		AE432B652119AF8E00C00196 /* KeyUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyUserDefaults.swift; sourceTree = "<group>"; };
-		AE432B682119BDFF00C00196 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		AE432B6A211AFBB300C00196 /* TrackableMixin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableMixin.swift; sourceTree = "<group>"; };
+		AE432B6D211B183E00C00196 /* AuthVCConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVCConstant.swift; sourceTree = "<group>"; };
+		AE432B6F211B1A0E00C00196 /* UserVCConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVCConstants.swift; sourceTree = "<group>"; };
+		AE432B71211B1BE300C00196 /* CatalogVCConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogVCConstant.swift; sourceTree = "<group>"; };
+		AE432B73211B1CB800C00196 /* RegisterVCConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVCConstant.swift; sourceTree = "<group>"; };
+		AE432B75211B1D5600C00196 /* ChangeUserDataVCConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataVCConstants.swift; sourceTree = "<group>"; };
+		AE432B77211B206F00C00196 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
+		AE432B79211C1E1400C00196 /* BasketFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketFactory.swift; sourceTree = "<group>"; };
+		AE432B7B211C24CD00C00196 /* ProductBasketFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductBasketFactory.swift; sourceTree = "<group>"; };
+		AE432B7D211C475400C00196 /* ProductVCConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVCConstants.swift; sourceTree = "<group>"; };
+		AE432B7F211C4AB500C00196 /* BasketVCConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketVCConstants.swift; sourceTree = "<group>"; };
 		AE4629A720FA2B9C00193626 /* CatalogRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogRequestFactory.swift; sourceTree = "<group>"; };
 		AE4629A920FA2CF700193626 /* Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
 		AE4629AB20FA303400193626 /* ProductSimpleResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSimpleResult.swift; sourceTree = "<group>"; };
@@ -200,12 +214,10 @@
 		AE6ADF702106067E007036EC /* DeleteFromBasket.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DeleteFromBasket.json; sourceTree = "<group>"; };
 		AE6ADF74210DC2A3007036EC /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		AE6ADF76210DC2CA007036EC /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
-		AE6ADF79210E13EA007036EC /* AuthVCKeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVCKeyboardHandler.swift; sourceTree = "<group>"; };
 		AE6ADF7C210E2421007036EC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AE6ADF7E210E255A007036EC /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		AE6ADF8A210F6A0E007036EC /* CompositeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeTextField.swift; sourceTree = "<group>"; };
 		AE6ADF8C210F75D7007036EC /* UniversalSetupableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalSetupableView.swift; sourceTree = "<group>"; };
-		AE6ADF8E210FA109007036EC /* RegisterVCKeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVCKeyboardHandler.swift; sourceTree = "<group>"; };
 		AE6ADF90211040B3007036EC /* CatalogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableViewController.swift; sourceTree = "<group>"; };
 		AE6ADF93211040D4007036EC /* Catalog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Catalog.storyboard; sourceTree = "<group>"; };
 		AE6ADF9521104307007036EC /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
@@ -372,10 +384,13 @@
 			children = (
 				AE432B53211856BE00C00196 /* UI */,
 				AE41F99C20EB779F002D96E6 /* AppDelegate.swift */,
+				AE432B7B211C24CD00C00196 /* ProductBasketFactory.swift */,
 				AEB394CE20F26BA100245DAA /* Network */,
 				AE432B562118612F00C00196 /* BasketLogic.swift */,
+				AE432B79211C1E1400C00196 /* BasketFactory.swift */,
 				AE432B672119B45500C00196 /* UserDefaults */,
-				AE432B682119BDFF00C00196 /* AppConstants.swift */,
+				AE432B6A211AFBB300C00196 /* TrackableMixin.swift */,
+				AE432B77211B206F00C00196 /* KeyboardManager.swift */,
 			);
 			path = BussinessLogic;
 			sourceTree = "<group>";
@@ -426,6 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				AE432B392110D8DC00C00196 /* UserViewController.swift */,
+				AE432B6F211B1A0E00C00196 /* UserVCConstants.swift */,
 				AE432B3B2110D91600C00196 /* User.storyboard */,
 			);
 			path = User;
@@ -448,6 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				AE432B3F21116D4500C00196 /* ProductViewController.swift */,
+				AE432B7D211C475400C00196 /* ProductVCConstants.swift */,
 				AE432B4121116D5D00C00196 /* Product.storyboard */,
 			);
 			path = Product;
@@ -457,7 +474,7 @@
 			isa = PBXGroup;
 			children = (
 				AE432B4821141A7300C00196 /* ChangeUserDataViewController.swift */,
-				AE432B4C21143B8C00C00196 /* ChangeUserDataVCKeyboardHandler.swift */,
+				AE432B75211B1D5600C00196 /* ChangeUserDataVCConstants.swift */,
 				AE432B4A21141E1000C00196 /* ChangeUserData.storyboard */,
 			);
 			path = UserData;
@@ -467,7 +484,7 @@
 			isa = PBXGroup;
 			children = (
 				AE432B4E21183F3900C00196 /* BasketViewController.swift */,
-				AE432B58211862FB00C00196 /* BasketVCKeyboardHandler.swift */,
+				AE432B7F211C4AB500C00196 /* BasketVCConstants.swift */,
 				AE432B5E2118B44100C00196 /* BasketVCPickerView.swift */,
 				AE432B5021183F4E00C00196 /* Basket.storyboard */,
 			);
@@ -486,7 +503,7 @@
 			isa = PBXGroup;
 			children = (
 				AE432B612119AB4800C00196 /* UserDefaultsFactory.swift */,
-				AE432B632119AF0400C00196 /* AuthUserDefaultsFactory.swift */,
+				AE432B632119AF0400C00196 /* AuthUDFactory.swift */,
 				AE432B652119AF8E00C00196 /* KeyUserDefaults.swift */,
 			);
 			path = UserDefaults;
@@ -513,7 +530,7 @@
 			isa = PBXGroup;
 			children = (
 				AE6ADF74210DC2A3007036EC /* AuthViewController.swift */,
-				AE6ADF79210E13EA007036EC /* AuthVCKeyboardHandler.swift */,
+				AE432B6D211B183E00C00196 /* AuthVCConstant.swift */,
 				AE6ADF76210DC2CA007036EC /* Auth.storyboard */,
 			);
 			path = Auth;
@@ -523,7 +540,7 @@
 			isa = PBXGroup;
 			children = (
 				AE6ADF7C210E2421007036EC /* RegisterViewController.swift */,
-				AE6ADF8E210FA109007036EC /* RegisterVCKeyboardHandler.swift */,
+				AE432B73211B1CB800C00196 /* RegisterVCConstant.swift */,
 				AE6ADF7E210E255A007036EC /* Register.storyboard */,
 			);
 			path = Register;
@@ -533,6 +550,7 @@
 			isa = PBXGroup;
 			children = (
 				AE6ADF90211040B3007036EC /* CatalogTableViewController.swift */,
+				AE432B71211B1BE300C00196 /* CatalogVCConstant.swift */,
 				AE6ADF93211040D4007036EC /* Catalog.storyboard */,
 			);
 			path = Catalog;
@@ -616,6 +634,7 @@
 				AE41F99720EB779F002D96E6 /* Resources */,
 				93398E9422FAE813D3281220 /* [CP] Embed Pods Frameworks */,
 				25EB033BC7DA197C518540CA /* [CP] Copy Pods Resources */,
+				AE432B6C211AFD5900C00196 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -905,6 +924,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-av.belyaev/Pods-av.belyaev-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AE432B6C211AFD5900C00196 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 3418d6794561eec71d7fd18f338cd430ed07d1f7 9ff8436b0f966093ebc8dfb30dbb52883e0ca29d83d9adf00023282f4a2171e1";
+		};
 		AE6ADF6120FCFC7E007036EC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -940,24 +973,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE432B72211B1BE300C00196 /* CatalogVCConstant.swift in Sources */,
 				AE432B662119AF8E00C00196 /* KeyUserDefaults.swift in Sources */,
 				AE4629AC20FA303400193626 /* ProductSimpleResult.swift in Sources */,
-				AE6ADF8F210FA109007036EC /* RegisterVCKeyboardHandler.swift in Sources */,
 				AE432B3A2110D8DC00C00196 /* UserViewController.swift in Sources */,
+				AE432B6B211AFBB300C00196 /* TrackableMixin.swift in Sources */,
 				AE4629AE20FA320100193626 /* ProductFullResult.swift in Sources */,
 				AEB394E020F3B35C00245DAA /* ChangeUserDataResult.swift in Sources */,
 				AEA23FE820F2589800D755B0 /* AbstractRequestFactory.swift in Sources */,
+				AE432B80211C4AB500C00196 /* BasketVCConstants.swift in Sources */,
 				AE6ADF75210DC2A3007036EC /* AuthViewController.swift in Sources */,
 				AE432B5D2118AECB00C00196 /* StackViewExtention.swift in Sources */,
 				AE4629A820FA2B9C00193626 /* CatalogRequestFactory.swift in Sources */,
-				AE432B692119BDFF00C00196 /* AppConstants.swift in Sources */,
+				AE432B74211B1CB800C00196 /* RegisterVCConstant.swift in Sources */,
 				AE41F99D20EB779F002D96E6 /* AppDelegate.swift in Sources */,
 				AEB394E420F3BEEA00245DAA /* LogoutResult.swift in Sources */,
 				AE6ADF5820FCF531007036EC /* DeleteReviewResult.swift in Sources */,
 				AE432B382110C8B800C00196 /* CompositeSegmentedControl.swift in Sources */,
 				AE6ADF5220FBC65E007036EC /* ReviewRequestFactory.swift in Sources */,
 				AE6ADF692105CD85007036EC /* Basket.swift in Sources */,
-				AE6ADF7A210E13EA007036EC /* AuthVCKeyboardHandler.swift in Sources */,
 				AEA23FEA20F25AEE00D755B0 /* RequestRouter.swift in Sources */,
 				AE6ADF7D210E2421007036EC /* RegisterViewController.swift in Sources */,
 				AEA27C2D20F9E782006BB525 /* UserData.swift in Sources */,
@@ -966,12 +1000,15 @@
 				AE6ADF8D210F75D7007036EC /* UniversalSetupableView.swift in Sources */,
 				AE214ADC20F2526D003F960D /* ResponceCodable.swift in Sources */,
 				AE214ADA20F24FB3003F960D /* ErrorParser.swift in Sources */,
+				AE432B76211B1D5600C00196 /* ChangeUserDataVCConstants.swift in Sources */,
 				AE432B362110C0CF00C00196 /* CompositeTextView.swift in Sources */,
-				AE432B4D21143B8C00C00196 /* ChangeUserDataVCKeyboardHandler.swift in Sources */,
+				AE432B78211B206F00C00196 /* KeyboardManager.swift in Sources */,
 				AE432B5B211863BA00C00196 /* BasketItemView.swift in Sources */,
 				AEA27C2B20F9E11A006BB525 /* BaseRequestFactory.swift in Sources */,
 				AE432B4021116D4500C00196 /* ProductViewController.swift in Sources */,
+				AE432B6E211B183E00C00196 /* AuthVCConstant.swift in Sources */,
 				AE214AD820F24EFE003F960D /* AbstractErrorParser.swift in Sources */,
+				AE432B7C211C24CD00C00196 /* ProductBasketFactory.swift in Sources */,
 				AE432B462112DA5400C00196 /* ReviewCompositeView.swift in Sources */,
 				AEB394D520F2740100245DAA /* RequestFactory.swift in Sources */,
 				AEB394DA20F3AADA00245DAA /* RegistrationResult.swift in Sources */,
@@ -982,19 +1019,21 @@
 				AE6ADF5420FBC7A6007036EC /* Reviews.swift in Sources */,
 				AE432B572118612F00C00196 /* BasketLogic.swift in Sources */,
 				AE432B5F2118B44100C00196 /* BasketVCPickerView.swift in Sources */,
+				AE432B7A211C1E1400C00196 /* BasketFactory.swift in Sources */,
 				AE432B622119AB4800C00196 /* UserDefaultsFactory.swift in Sources */,
-				AE432B59211862FB00C00196 /* BasketVCKeyboardHandler.swift in Sources */,
 				AEB394D020F26BC100245DAA /* AuthRequestFactory.swift in Sources */,
 				AEA23FED20F26A0400D755B0 /* LoginResult.swift in Sources */,
 				AE432B55211856E500C00196 /* AlertControllerFactory.swift in Sources */,
-				AE432B642119AF0400C00196 /* AuthUserDefaultsFactory.swift in Sources */,
+				AE432B642119AF0400C00196 /* AuthUDFactory.swift in Sources */,
 				AEB394DE20F3B32200245DAA /* UserProfileRequestFactory.swift in Sources */,
 				AEA27C2920F9E0F8006BB525 /* UserProfile.swift in Sources */,
+				AE432B70211B1A0E00C00196 /* UserVCConstants.swift in Sources */,
 				AE6ADF5020FBC461007036EC /* ReviewResult.swift in Sources */,
 				AE6ADF672105C9E7007036EC /* BasketRequestFactory.swift in Sources */,
 				AEB394D220F26CC000245DAA /* Auth.swift in Sources */,
 				AE6ADF6B21060075007036EC /* PaidOrderResult.swift in Sources */,
 				AE432B4F21183F3900C00196 /* BasketViewController.swift in Sources */,
+				AE432B7E211C475400C00196 /* ProductVCConstants.swift in Sources */,
 				AE6ADF5620FCF2C5007036EC /* AddingReviewResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
