@@ -20,6 +20,7 @@ class av_belyaevUITests: XCTestCase {
         app = XCUIApplication()
         app.launch()
         scrollViewsQuery = app.scrollViews
+        setupSnapshot(app)
 
         /* In UI tests it’s important to set the initial state
             - such as interface orientation - required for your tests
@@ -82,6 +83,8 @@ class av_belyaevUITests: XCTestCase {
         let confirmPasswordField = app.textFields["confirmPasswordField"]
         confirmPasswordField.tap()
         confirmPasswordField.typeText(password)
+        
+        snapshot()
         
         let buttonEnter = scrollViewsQuery.buttons["registerButton"]
         buttonEnter.tap()
