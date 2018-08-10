@@ -5,11 +5,13 @@
 
 import UIKit
 
-class AuthViewController: UIViewController {
+class AuthViewController: UIViewController, TrackableMixin {
     
     let requestFactoryUserAuth: AuthRequestFactory
         = RequestFactory().makeAuthRequestFactory()
-    let authUserDefaultsFactory = UserDefaultsFactory().makeAuthFactory()
+    let authUserDefaultsFactory
+        = UserDefaultsFactory().makeAuthFactory()
+    var keyboardManager: KeyboardManager?
 
     @IBOutlet weak var login: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -21,16 +23,23 @@ class AuthViewController: UIViewController {
     
     @IBAction func cancelButtonDidTap(_ sender: UIBarButtonItem) {
         authUserDefaultsFactory.pressCancelButton(flag: false)
-        performSegue(withIdentifier: "unwindToUserData", sender: self)
+        performSegue(
+            withIdentifier: AuthConstants.unwindToUserData.rawValue,
+            sender: self
+        )
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        keyboardManager = KeyboardManager(scrollView: self.scrollView)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        subscribeOnKeyboardNotification()
-        hideKeyboardGesture()
+        keyboardManager?.subscribeOnKeyboardNotification()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        unsubscribeOnKeyboardNotification()
+        keyboardManager?.unsubscribeOnKeyboardNotification()
     }
     
     func authorization() {
@@ -39,7 +48,8 @@ class AuthViewController: UIViewController {
         else {
             return
         }
-        if username == "test" && password == "test" {
+        if username == AuthConstants.defaultPasswordAndUser.rawValue
+            && password == AuthConstants.defaultPasswordAndUser.rawValue {
             requestFactoryUserAuth.login(
                 userName: username,
                 password: password
@@ -49,18 +59,25 @@ class AuthViewController: UIViewController {
                     if login.result == 1 {
                         self.authUserDefaultsFactory.saveDataAfterLogin(login: login)
                         DispatchQueue.main.async {
-                            self.performSegue(withIdentifier: "unwindToUserData", sender: self)
+                            self.performSegue(
+                                withIdentifier: AuthConstants.unwindToUserData.rawValue,
+                                sender: self
+                            )
                         }
+                        self.track(AnalyticsEvent.login(method: .password, success: true))
                     }
                 case .failure(let error):
                     print(error.localizedDescription)
+                    self.track(AnalyticsEvent.login(method: .password, success: true))
                 }
             }
         } else {
             AlertControllerFactory.callAlertOK(
-                title: "Авторизация",
-                message: "Неверный логин или пароль",
+                title: AuthConstants.alertTitle.rawValue,
+                message: AuthConstants.alertMessage.rawValue,
                 controller: self) { _ in }
+            
+            self.track(AnalyticsEvent.login(method: .password, success: true))
         }
         
     }

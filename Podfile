@@ -9,6 +9,8 @@ target 'av.belyaev' do
   pod 'OHHTTPStubs/Swift'
   pod 'SwiftLint'
   pod 'SnapKit', '~> 4.0.0'
+  pod 'Fabric'
+  pod 'Crashlytics'
   
   # Pods for av.belyaev
 

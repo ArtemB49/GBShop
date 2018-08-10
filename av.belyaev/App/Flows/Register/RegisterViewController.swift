@@ -4,7 +4,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, TrackableMixin {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var userNameView: CompositeTextField!
@@ -18,14 +18,19 @@ class RegisterViewController: UIViewController {
     let registerRequestFactory: AuthRequestFactory
         = RequestFactory().makeAuthRequestFactory()
     let authUserDefaultsFactory = UserDefaultsFactory().makeAuthFactory()
+    var keyboardManager: KeyboardManager?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        keyboardManager = KeyboardManager(scrollView: self.scrollView)
+    }
     
     override func viewDidAppear(_ animated: Bool) {
-        subscribeOnKeyboardNotification()
-        hideKeyboardGesture()
+        keyboardManager?.subscribeOnKeyboardNotification()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        unsubscribeOnKeyboardNotification()
+        keyboardManager?.unsubscribeOnKeyboardNotification()
     }
     
     @IBAction func registerButtonDidTap(_ sender: UIButton) {
@@ -51,9 +56,11 @@ class RegisterViewController: UIViewController {
                 if value.result == 1 {
                     self.authUserDefaultsFactory.saveDataAfterRegister(userData: self.userData)
                     DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: AppConstants().unwindToUserData, sender: self)
+                        self.performSegue(
+                            withIdentifier: RegisterVCConstants.unwindToUserData.rawValue,
+                            sender: self)
                     }
-                    
+                   self.track(AnalyticsEvent.register(method: .password, success: true))
                 }
             case .failure(let error):
                 print(error.localizedDescription)

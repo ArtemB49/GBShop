@@ -4,7 +4,7 @@
 
 import UIKit
 
-class ProductViewController: UIViewController {
+class ProductViewController: UIViewController, TrackableMixin {
     
     let catalogRequestFactory: CatalogRequestFactory
         = RequestFactory().makeCatalogRequestFactory()
@@ -22,11 +22,16 @@ class ProductViewController: UIViewController {
     @IBAction func addToBasketButtonDidTap(_ sender: UIButton) {
         if let product = self.product {
             basket.products.append(product)
-            if let tabController = self.tabBarController,
-                let tabItems = tabController.tabBar.items {
-                tabItems[1].badgeValue = String(basket.products.count)
-                tabItems[1].isEnabled = true
-            }
+            track(AnalyticsEvent.addToBasket(nameProduct: product.name))
+            increaseNumberBasketItem()
+        }
+    }
+    
+    func increaseNumberBasketItem() {
+        if let tabController = self.tabBarController,
+            let tabItems = tabController.tabBar.items {
+            tabItems[1].badgeValue = String(basket.products.count)
+            tabItems[1].isEnabled = true
         }
     }
     
@@ -52,7 +57,7 @@ class ProductViewController: UIViewController {
                     self.priceProduct.text = String(product.price)
                     self.descriptionLabel.text = product.description
                 }
-                print(product)
+                self.track(AnalyticsEvent.showProduct(nameProduct: product.name))
                 
             case .failure(let error):
                 print(error.localizedDescription)
@@ -73,7 +78,10 @@ class ProductViewController: UIViewController {
                     )
                 }
             case .failure(let error):
-                self.reviewTitleLabel.text = "Нет отзывов"
+                DispatchQueue.main.async {
+                    self.reviewTitleLabel.text
+                        = ProductVCConstants.titleReviewLabel.rawValue
+                }
                 print("Отзывы работают только с использованием мок сервера")
                 print(error.localizedDescription)
             }

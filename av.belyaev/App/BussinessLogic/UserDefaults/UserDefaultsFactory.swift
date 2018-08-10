@@ -6,8 +6,8 @@ import Foundation
 
 class UserDefaultsFactory {
     
-    func makeAuthFactory() -> AuthUserDefaultsFactory {
-        return AuthUserDefaultsFactory()
+    func makeAuthFactory() -> AuthUDFactory {
+        return AuthUDFactory()
     }
 
 }

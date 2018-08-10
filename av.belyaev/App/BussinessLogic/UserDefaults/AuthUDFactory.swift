@@ -4,7 +4,7 @@
 
 import Foundation
 
-class AuthUserDefaultsFactory: KeyUserDefaults {
+class AuthUDFactory: KeyUserDefaults {
     
     func saveDataAfterLogin(login: LoginResult) {
         userDefaults.set(true, forKey: isAuthKey)
@@ -29,6 +29,49 @@ class AuthUserDefaultsFactory: KeyUserDefaults {
     func saveDataAfterRegister(userData: UserData) {
         userDefaults.set(true, forKey: isAuthKey)
         userDefaults.set(userData.userName, forKey: firstNameKey)
-        
+    }
+    
+    func isCancelButtonNotTap() -> Bool {
+        return userDefaults.bool(forKey: cancelButtonKey)
+    }
+    
+    func isAuth() -> Bool {
+        return userDefaults.bool(forKey: isAuthKey)
+    }
+    
+    var firstName: String? {
+        get {
+            return userDefaults.string(forKey: firstNameKey)
+        }
+        set {
+            userDefaults.set(newValue, forKey: firstNameKey)
+        }
+    }
+    
+    var lastName: String? {
+        get {
+            return userDefaults.string(forKey: lastNameKey)
+        }
+        set {
+            userDefaults.set(newValue, forKey: lastNameKey)
+        }
+    }
+    
+    var userID: Int? {
+        get {
+            return userDefaults.integer(forKey: userIDKey)
+        }
+        set {
+            userDefaults.set(newValue, forKey: userIDKey)
+        }
+    }
+    
+    var userName: String? {
+        get {
+            return userDefaults.string(forKey: userNameKey)
+        }
+        set {
+            userDefaults.set(newValue, forKey: userNameKey)
+        }
     }
 }
