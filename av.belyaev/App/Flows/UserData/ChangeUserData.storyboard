@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UP3-M6-OIK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Изменение данных-->
+        <scene sceneID="ccE-ty-LzX">
+            <objects>
+                <viewController title="Изменение данных" id="ZeP-4F-K1z" customClass="ChangeUserDataViewController" customModule="av_belyaev" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c9q-z3-QyN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8p-TJ-vuZ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="EBD-8e-7BB">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="630"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xgm-SD-DIF" customClass="CompositeTextField" customModule="av_belyaev" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="titleImage" value="username"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Имя"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nzn-zP-t8o" customClass="CompositeTextField" customModule="av_belyaev" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="100" width="375" height="100"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="titleImage" value="email"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="E-Mail"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQe-vo-TTz" customClass="CompositeTextField" customModule="av_belyaev" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="200" width="375" height="100"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="titleImage" value="card"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Карта"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fof-Z4-rbM" customClass="CompositeSegmentedControl" customModule="av_belyaev" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="300" width="375" height="100"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="titleImage" value="gender"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Пол"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2GI-83-BbP" customClass="CompositeTextView" customModule="av_belyaev" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="400" width="375" height="100"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="titleImage" value="about"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="О себе"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ra7-Z9-HFv" customClass="CompositeTextField" customModule="av_belyaev" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="500" width="375" height="100"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="titleImage" value="lock"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Пароль"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOd-IM-aYm">
+                                                <rect key="frame" x="0.0" y="600" width="375" height="30"/>
+                                                <state key="normal" title="Сохранить"/>
+                                                <connections>
+                                                    <action selector="saveButtonDidTab:" destination="ZeP-4F-K1z" eventType="touchUpInside" id="QHR-Az-98H"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="EBD-8e-7BB" firstAttribute="width" secondItem="t8p-TJ-vuZ" secondAttribute="width" priority="1" placeholder="YES" id="1Ht-V3-qIT"/>
+                                    <constraint firstItem="EBD-8e-7BB" firstAttribute="top" secondItem="t8p-TJ-vuZ" secondAttribute="top" id="Ec0-YA-OjT"/>
+                                    <constraint firstItem="EBD-8e-7BB" firstAttribute="height" secondItem="t8p-TJ-vuZ" secondAttribute="height" priority="1" placeholder="YES" id="HyB-kE-mLb"/>
+                                    <constraint firstItem="EBD-8e-7BB" firstAttribute="centerX" secondItem="t8p-TJ-vuZ" secondAttribute="centerX" id="J6Q-IX-2P9"/>
+                                    <constraint firstAttribute="trailing" secondItem="EBD-8e-7BB" secondAttribute="trailing" id="MZo-CD-Llu"/>
+                                    <constraint firstAttribute="bottom" secondItem="EBD-8e-7BB" secondAttribute="bottom" id="gPt-HU-W5R"/>
+                                    <constraint firstItem="EBD-8e-7BB" firstAttribute="leading" secondItem="t8p-TJ-vuZ" secondAttribute="leading" id="vvs-b7-c2l"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t8p-TJ-vuZ" firstAttribute="leading" secondItem="QEG-OU-q5W" secondAttribute="leading" id="Ldf-7K-wni"/>
+                            <constraint firstItem="t8p-TJ-vuZ" firstAttribute="leading" secondItem="QEG-OU-q5W" secondAttribute="leading" id="Nij-Jx-wda"/>
+                            <constraint firstItem="t8p-TJ-vuZ" firstAttribute="trailing" secondItem="QEG-OU-q5W" secondAttribute="trailing" id="niu-V4-O7O"/>
+                            <constraint firstItem="QEG-OU-q5W" firstAttribute="trailing" secondItem="t8p-TJ-vuZ" secondAttribute="trailing" id="pnk-Xe-Mgt"/>
+                            <constraint firstItem="t8p-TJ-vuZ" firstAttribute="bottom" secondItem="QEG-OU-q5W" secondAttribute="bottom" id="sEX-iO-2j0"/>
+                            <constraint firstItem="QEG-OU-q5W" firstAttribute="bottom" secondItem="t8p-TJ-vuZ" secondAttribute="bottom" id="sZv-ub-Kro"/>
+                            <constraint firstItem="t8p-TJ-vuZ" firstAttribute="top" secondItem="QEG-OU-q5W" secondAttribute="top" id="uUA-bg-G9m"/>
+                            <constraint firstItem="t8p-TJ-vuZ" firstAttribute="top" secondItem="QEG-OU-q5W" secondAttribute="top" id="zYW-lf-oZX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QEG-OU-q5W"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YAV-0S-446">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NyX-gV-Pzl">
+                            <connections>
+                                <action selector="cancelButtonDidTap:" destination="ZeP-4F-K1z" id="LSm-6A-CJp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="aboutField" destination="2GI-83-BbP" id="i6z-gY-4ni"/>
+                        <outlet property="cardField" destination="iQe-vo-TTz" id="2z9-Sx-BpX"/>
+                        <outlet property="emailField" destination="nzn-zP-t8o" id="bep-bF-E3K"/>
+                        <outlet property="genderField" destination="fof-Z4-rbM" id="WYo-JT-fBr"/>
+                        <outlet property="passwordField" destination="Ra7-Z9-HFv" id="UTX-Oe-g1j"/>
+                        <outlet property="scrollView" destination="t8p-TJ-vuZ" id="89m-Tn-koU"/>
+                        <outlet property="userNameField" destination="Xgm-SD-DIF" id="j3R-YP-c60"/>
+                        <segue destination="QAk-hl-Cax" kind="unwind" identifier="unwindToUserData" unwindAction="unwindToUserDataWithSegue:" id="SbT-op-fqE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WNN-Iy-DcO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="QAk-hl-Cax" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="920.79999999999995" y="91.304347826086968"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="htb-7Q-hEB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UP3-M6-OIK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QQS-g2-LNq">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZeP-4F-K1z" kind="relationship" relationship="rootViewController" id="IBY-wf-7bl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tOU-Kg-eoB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18.399999999999999" y="91.304347826086968"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="about" width="25" height="25"/>
+        <image name="card" width="25" height="25"/>
+        <image name="email" width="25" height="25"/>
+        <image name="gender" width="25" height="25"/>
+        <image name="lock" width="25" height="25"/>
+        <image name="username" width="25" height="25"/>
+    </resources>
+</document>

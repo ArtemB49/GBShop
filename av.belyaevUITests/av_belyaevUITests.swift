@@ -7,20 +7,24 @@
 //
 
 import XCTest
-
+// swiftlint:disable type_name
 class av_belyaevUITests: XCTestCase {
-        
+// swiftlint:enable force_cast
+    
+    var app: XCUIApplication!
+    var scrollViewsQuery: XCUIElementQuery!
+    
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
+        app = XCUIApplication()
+        app.launch()
+        scrollViewsQuery = app.scrollViews
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        /* In UI tests it’s important to set the initial state
+            - such as interface orientation - required for your tests
+            before they run. The setUp method is a good place to do this.
+         */
     }
     
     override func tearDown() {
@@ -29,8 +33,72 @@ class av_belyaevUITests: XCTestCase {
     }
     
     func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        app.tabBars.buttons["Пользователь"].tap()
+
+        app.buttons["registeringButton"].tap()
+
+        registration(
+            name: "testName",
+            email: "test@email.ru",
+            card: "3222-3333-3333-2222",
+            about: "Let me speak from my heath",
+            password: "testpassword"
+        )
+        
+        app.buttons["logoutButton"].tap()
+        
+        auth(login: "test", password: "test")
+    }
+    
+    func registration(
+        name: String,
+        email: String,
+        card: String,
+        about: String,
+        password: String
+        ) {
+        
+        let nameField = app.textFields["nameField"]
+        nameField.tap()
+        nameField.typeText(name)
+        
+        let emailField = app.textFields["emailField"]
+        emailField.tap()
+        emailField.typeText(email)
+        
+        let cardField = app.textFields["cardField"]
+        cardField.tap()
+        cardField.typeText(card)
+        
+        let aboutField = app.textViews["aboutField"]
+        aboutField.tap()
+        aboutField.typeText(about)
+        
+        let passwordField = app.textFields["passwordField"]
+        passwordField.tap()
+        passwordField.typeText(password)
+        
+        let confirmPasswordField = app.textFields["confirmPasswordField"]
+        confirmPasswordField.tap()
+        confirmPasswordField.typeText(password)
+        
+        let buttonEnter = scrollViewsQuery.buttons["registerButton"]
+        buttonEnter.tap()
+        
+    }
+    
+    func auth(login: String, password: String) {
+        let loginField = app.textFields["login"]
+        loginField.tap()
+        loginField.typeText(login)
+        
+        let passwordField = app.secureTextFields["password"]
+        passwordField.tap()
+        passwordField.typeText(password)
+        
+        let buttonEnter = scrollViewsQuery.buttons["go"]
+        buttonEnter.tap()
     }
     
 }
